@@ -1,0 +1,21 @@
+
+$salmon_color:#e4867c;
+$font_color:#373736;
+$main_padding:40px;
+:root{
+
+    --h_size:50px;
+    --main_size:22px;
+--big_size:27px;
+}
+
+@media (max-width:1024px) {
+    :root{
+
+        --h_size:35px;
+        --main_size:18px;
+        --big_size:22px;
+    }
+
+
+}
