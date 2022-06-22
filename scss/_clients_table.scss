@@ -1,0 +1,23 @@
+.form-top-container{
+    display: flex;
+    .form-img{
+        width: 30%;
+        margin-bottom: 10px;
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+    }
+    .form-edit{
+        width: 70%;
+        margin-left: 10px;
+        .form-edit-input{
+            margin-bottom: 10px;
+        }
+        .dropdown:nth-child(2) .dropdown-toggle{
+            min-width: 140px;
+        }
+    }
+}

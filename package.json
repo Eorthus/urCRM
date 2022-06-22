@@ -1,7 +1,9 @@
 {
   "dependencies": {
     "bootstrap": "^5.2.0-beta1",
+    "chance": "^1.1.8",
     "datatables.net": "^1.12.1",
-    "datatables.net-dt": "^1.12.1"
+    "datatables.net-dt": "^1.12.1",
+    "tui-calendar": "^1.15.3"
   }
 }

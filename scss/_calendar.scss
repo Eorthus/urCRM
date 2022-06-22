@@ -1,0 +1,337 @@
+.lnb-calendars-d1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+#right{
+    position: relative;
+}
+.position-item{
+position: absolute;
+top: 14px;
+left: 220px;
+white-space: nowrap;
+font-weight: normal;
+label{
+    display: flex;
+align-items: center;
+span{
+    width: 20px;
+height: 20px;
+background-size: 100%;
+}
+strong{
+    font-weight: normal;
+font-size: 18px;
+}
+}
+
+}
+input[type='checkbox'].tui-full-calendar-checkbox-square:checked + span {
+    background: url(../img/check.png) no-repeat;
+}
+.calendar-menu{
+    display: flex;
+    justify-content: space-between;
+    .btn-8:focus{
+        &::after{
+            display: none;
+        }
+    }
+    .btn-8::after{
+        top: 50%;
+        right: 10%;
+        background: TRANSPARENT;
+    }
+    .btn-8:hover::after{
+        top:unset;
+        right: 0;
+        background:#002f4b8f;
+    }
+   a{
+    color:$font_color !important;
+   }
+    margin-bottom: 30px;
+    .dropdown-toggle{
+        max-width: 200px;
+    width: 100%;
+    min-width: 200px;
+        &:hover::after{
+            width: 98%;
+             display: inline-block; 
+     margin-left: unset;
+     vertical-align: unset;
+   border:none;
+   top:unset;
+   right:0;
+   background: #002f4b8f;
+}
+
+        }  
+     
+        .dropdown{
+            max-width: 200px;
+            width: 100%;
+            display: flex;
+    align-items: center;
+    .lnb-calendars-item{
+        margin-left: 20px;
+    white-space: nowrap;
+    font-weight: normal;
+    position: absolute;
+    top: 14px;
+    left: 220px;
+    label{
+        display: flex;
+    align-items: center;
+    span{
+        width: 20px;
+    height: 20px;
+    background-size: 100%;
+    }
+    strong{
+        font-weight: normal;
+    font-size: 18px;
+    }
+    }
+    }
+        }
+        .dropdown-menu{
+            //padding: 20px;
+    box-shadow: 0px 5px 10px 0px rgba(34, 60, 80, 0.2);
+    border: none;
+    width: 100%;
+    max-width: 200px;
+    & li {
+        margin-bottom: 5px;
+        padding:5px 10px 5px 10px;
+        &:hover{
+            background-image: linear-gradient(45deg, white 87%, #f4dac980 0%);
+        }
+    }
+        }
+        #menu-navi{
+            display: flex;
+    align-items: center;
+.move-day{
+    width: 30px;
+    max-width: 100%;
+    margin-right: 0;
+    display: unset;
+        font-weight: bold;
+        font-size: var(--main_size);
+    }
+}
+
+   
+    .render-range{
+        padding: 10px;
+        font-size: var(--main_size);
+        white-space: nowrap;
+
+    }
+
+
+}
+#calendar{
+    .tui-full-calendar-vlayout-container{
+        background-color: white;
+        background-image: linear-gradient(35deg, rgba(255,255,255,1) 80%, $first_col 80%, $second_col 80%);
+        border-radius: 10px 10px 0px 0px;
+    }
+
+        .tui-full-calendar-month-dayname{
+            //height: 50px !important;
+            background-color: inherit;
+            text-align: left;
+            font-weight: normal;
+            border-radius: 10px;
+            color: white;
+        }
+        .tui-full-calendar-extra-date{
+            &:hover{
+                background: $light_color;
+            }
+        }
+        
+    .tui-view-8{
+        border-top: none;
+        border-radius: 0px 0px 10px 10px;
+    }
+    .tui-full-calendar-weekday-grid-date-decorator{
+
+        color:white;
+    }
+    .tui-full-calendar-timegrid-container::-webkit-scrollbar, .tui-full-calendar-dayname-container::-webkit-scrollbar {
+
+        width: 6px;
+        }
+        
+        .tui-full-calendar-timegrid-container::-webkit-scrollbar-thumb, .tui-full-calendar-dayname-container::-webkit-scrollbar {
+          border-radius: 4px;
+          background-image: $gradient_color;
+        }
+        
+        .tui-full-calendar-timegrid-container::-webkit-scrollbar-track, .tui-full-calendar-dayname-container::-webkit-scrollbar {
+          border-radius: 4px;
+          background-color: rgba(black,0.1);
+
+        }
+}
+.tui-full-calendar-popup{
+
+    .tui-full-calendar-popup-container{
+        border-radius: 20px;
+        min-height: 295px;
+        padding:20px !important;
+        box-shadow: 0px 0px 9px 1px rgba(34, 60, 80, 0.2);
+        .tui-full-calendar-section-calendar{
+           
+            button{
+                border-radius:10px;
+            }
+        }
+        .tui-full-calendar-popup-section{
+        
+            margin-bottom: 10px;
+            display: flex;
+            .tui-full-calendar-section-private{
+                display: none !important;
+            }
+            .tui-full-calendar-popup-section-item{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                border-radius: 10px;
+                &:hover, &:focus{
+                    border: 5px solid $light_color;
+                }
+                input{
+                    &:hover, &:focus{
+                        border-top: 5px solid $light_color;
+                        border-radius: 0;
+                        border-bottom: 5px solid $light_color;
+                    }
+               
+                }
+            }
+            input{
+                border-radius: 10px;
+            }
+            .tui-full-calendar-section-allday{
+                display: none;
+            }
+            .tui-full-calendar-popup-section{
+                margin-bottom: 10px;
+            }
+         
+
+        }
+        .tui-full-calendar-section-state{
+            display: none !important;
+        }
+        .tui-full-calendar-section-button-save{
+            display: flex ;
+            button{
+                max-width:200px ;
+                width:100%;
+                font-size: 16px;
+                line-height: 50px;
+                text-align: center;
+                height: 50px;
+                color: #fff;
+                border-radius: 10px;
+                padding: 10px 25px;
+                font-weight: 500;
+                background: transparent;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                display: inline-block;
+                 box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+                 7px 7px 20px 0px rgba(0,0,0,.1),
+                 4px 4px 5px 0px rgba(0,0,0,.1);
+                outline: none;
+                background-color: #f0ecfc;
+                background-image: linear-gradient(315deg, rgba(0, 48, 77, 0.561) 0%, rgba(220, 67, 37, 0.596) 54%);
+                  padding:0;
+                  border: none;
+
+                  & span {
+                    position: relative;
+                    display: block;
+                    max-width: 190px;
+                    width: 100%;
+                    height: 100%;
+                  }
+                  &:before,
+                  &:after{
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    bottom: 0;
+                    background: #002f4b8f;
+                    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+                      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+                      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+                    transition: all 0.3s ease;
+                  }
+                  &:before{
+                     height: 0%;
+                     width: 2px;
+                  }
+                  &:after {
+                    width: 0%;
+                    height: 2px;
+                  }
+                  &:hover:before {
+                    height: 100%;
+                  }
+                  &:hover:after {
+                    width: 100%;
+                  }
+                  &:hover{
+                    background: transparent;
+                  }
+                  & span:hover{
+                    color: #7cd4c9;
+                    display: inline-block;
+                    background: $gradient_color;
+                    -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  cursor: pointer;
+                  transition: ease all 1000ms;
+                  }
+                  & span:before,
+                  & span:after {
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    background: #dc43254d;
+                    /*box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                                -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+                      inset -4px -4px 6px 0 rgba(255,255,255,.5),
+                      inset 4px 4px 6px 0 rgba(116, 125, 136, .3);*/
+                    transition: all 0.3s ease;
+                  }
+                  & span:before {
+                    width: 2px;
+                    height: 0%;
+                  }
+                  & span:after {
+                    height: 2px;
+                    width: 0%;
+                  }
+                  & span:hover:before {
+                    height: 100%;
+                  }
+                  & span:hover:after {
+                    width: 100%;
+                  }
+            }
+           
+        }
+    }
+}

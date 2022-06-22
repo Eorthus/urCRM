@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+    <link rel="stylesheet" type="text/css" href="./js/components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./js/components/datatables.net-dt/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/d30ea8c077.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-img">
+    <div class="ball"></div>
+    <div class="offcanvas offcanvas-end opacity" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-gradient-light-red" id="offcanvasRightLabel">Title</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est optio ab rem molestiae nobis. Aliquid laudantium neque, praesentium expedita delectus minima, maxime consequuntur dolorem tempore quod et temporibus. Recusandae, quaerat.</p>
+        </div>
+      </div>
+
+      <!--header-->
+    <header>
+        <div class="header-container">
+            <nav class="navbar navbar-dark bg-light navbar-expand-md fixed-top header-navbar content">
+                <div class="container-fluid">
+                  <a class="navbar-brand glitch" data-text="ЮрПортал" href="case_table.html" >
+                   ЮрПортал
+                  </a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title glitch glitch-dark" data-text="Logo" id="offcanvasNavbarLabel" >Logo</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class="header-notification">
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="header-notification-count">5</span>
+                                <img src="./img/notification.png" alt="notification">
+                                <!--icons from icons8.com-->
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                              <li><a class="dropdown-item" href="#">
+                                <div class="header-notification-container">
+                                <span class="header-notification-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam corrupti quia atque reiciendis numquam natus vel, eum, mollitia, veniam fugit nemo modi quidem fugiat iusto odio sint. Possimus, repudiandae dolores!</span>
+                         <span class="header-notification-date">12.06.2022 10:34:56</span>
+                            </div>
+                            <button class="header-notification-button"><img src="./img/mark.png" alt="mark"></button>
+                              </a></li>
+                              <li><a class="dropdown-item" href="#">
+                                <div class="header-notification-container">
+                                <span class="header-notification-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repudiandae dolores!</span>
+                         <span class="header-notification-date">12.06.2022 10:34:56</span>
+                            </div>
+                            <button class="header-notification-button"><img src="./img/mark.png" alt="mark"></button>
+                              </a></li>
+                              <li><a class="dropdown-item" href="#">
+                                <div class="header-notification-container">
+                                <span class="header-notification-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repudiandae dolores!</span>
+                         <span class="header-notification-date">12.06.2022 10:34:56</span>
+                            </div>
+                            <button class="header-notification-button"><img src="./img/mark.png" alt="mark"></button>
+                              </a></li>
+                              <li><a class="dropdown-item" href="#">
+                                <div class="header-notification-container">
+                                <span class="header-notification-message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, repudiandae dolores!</span>
+                         <span class="header-notification-date">12.06.2022 10:34:56</span>
+                            </div>
+                            <button class="header-notification-button"><img src="./img/mark.png" alt="mark"></button>
+                              </a></li>
+                              </ul>
+                          </div>
+
+                      </div>
+                      <div class="d-flex offcanvas-footer header-account">
+                        <div class="dropdown">
+                            <a class="btn dropdown-toggle header-navbar-icon" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                             <img src="./img//20182807105210.jpg" alt="icon">
+                            </a>
+                          
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                              <li class="header-account-top">
+                                <div class="header-account-top-info">
+                                    <span class="header-account-top-info-name">Анна</span>
+                                    <span class="header-account-top-info-surname">Каренина</span>
+                                    <span class="header-account-top-info-status">Адвокат</span>
+                                </div>
+                                <a class="dropdown-item header-account-top-link" href="./account.html"><img src="./img/settings.png" alt="settings"></a></li>
+                              <li class="header-account-bottom"><a class="dropdown-item header-account-bottom-tariff" href="./account.html">
+                                <span class="header-account-bottom-tariff-span">Тариф:</span>
+                                <span class="header-account-bottom-tariff-name">Базовый</span>
+                              </a></li>
+                              
+                            </ul>
+                          </div>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </header>
+<main>
+    <div class="index-container">
+        <div class="index-menu">
+            <ul class="index-menu-ul">
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="case_table.html"><img src="./img/home1.png" alt="icon"> <span class="index-menu-ul-li-span">Дела</span></a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="clients_table.html"><img src="./img/clients1.png" alt="icon"> <span class="index-menu-ul-li-span">Клиенты</span></a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="docs_table.html"><img src="./img/docs1.png" alt="icon"> <span class="index-menu-ul-li-span">Документы</span></a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calendar.html"><img src="./img/calendar1.png" alt="icon"> <span class="index-menu-ul-li-span">Календарь</span> </a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calculator.html"><img src="./img/calc1.png" alt="icon"> <span class="index-menu-ul-li-span">Калькулятор</span> </a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="search_base.html"><img src="./img/paper1.png" alt="icon"> <span class="index-menu-ul-li-span">Справки</span></a></li>
+          
+              <!--icons from icons8.ru-->
+              </ul>
+        </div>
+        <div class="index-window">
+            <div class="index-window-panel">
+                <span class="index-window-panel-title text-gradient-light-red">Панель руководителя</span>
+                
+            </div>
+            
+    </div>
+    </div>
+</main>
+    <footer>
+
+    </footer>
+
+    <script type="text/javascript" src="./js/components/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="./js/components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="./js/components/datatables.net/js/jquery.dataTables.js"></script>
+    <script src="./js/components/gsap/minified/gsap.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
