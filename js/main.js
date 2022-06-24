@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() { 
 
-//table   
+//table  initialisation -----------------------------------------------------------------------------------------------------------
 document.title='Simple DataTable';
-// DataTable initialisation
 var table = $('#example, #example2').DataTable(
     {
         "language": {
@@ -17,9 +16,7 @@ var table = $('#example, #example2').DataTable(
         "buttons": [ 'copy', 'csv', 'excel' ],
     }
 );
-
-
-
+//render status
 (function() {
     var calendarList = document.querySelectorAll('.lnb-calendars-d1');
     calendarList.forEach( (calendarList)=>{
@@ -38,6 +35,7 @@ var table = $('#example, #example2').DataTable(
     )
    
 })();
+//listener status click
 (function () {
     var calendarElements = Array.prototype.slice.call(document.querySelectorAll('#calendarList input'));
 
@@ -49,7 +47,7 @@ var table = $('#example, #example2').DataTable(
       
     });
 })();
-
+//select row table
 $('#example tbody').on('click', 'tr', function () {
     if ($(this).hasClass('selected')) {
         $(this).removeClass('selected');
@@ -58,7 +56,7 @@ $('#example tbody').on('click', 'tr', function () {
         $(this).addClass('selected');
     }
 });
-
+//del row table
 $('.delete').click(function () {
     table.rows('.selected').remove().draw(false);
 });
@@ -122,43 +120,9 @@ $('.add').each(function () {
         });
     });
 });
-//Edit row buttons
-$('.dt-edit').each(function () {
-    $(this).on('click', function(evt){
-        $this = $(this);
-        var dtRow = $this.parents('tr');
-        $('div.modal-body').innerHTML='';
-        $('div.modal-body').append('Row index: '+dtRow[0].rowIndex+'<br/>');
-        $('div.modal-body').append('Number of columns: '+dtRow[0].cells.length+'<br/>');
-        for(var i=0; i < dtRow[0].cells.length; i++){
-            $('div.modal-body').append('Cell (column, row) '+dtRow[0].cells[i]._DT_CellIndex.column+', '+dtRow[0].cells[i]._DT_CellIndex.row+' => innerHTML : '+dtRow[0].cells[i].innerHTML+'<br/>');
-        }
-        $('#myModal').modal('show');
-    });
-});
+ 
 
-//Delete buttons
-$('.dt-delete').each(function () {
-    $(this).on('click', function(evt){
-        $this = $(this);
-        var dtRow = $this.parents('tr');
-        if(confirm("Are you sure to delete this row?")){
-            var table = $('#example').DataTable();
-            table.row(dtRow[0].rowIndex-1).remove().draw( false );
-        }
-    });
-});
-$('#myModal').on('hidden.bs.modal', function (evt) {
-    $('.modal .modal-body').empty();
-});
-
-
-    
-
-
-
-
-//file upload
+//avatar upload--------------------------------------------------------------------------------------------------
 if (document.querySelector('.file-upload')){
     document.querySelector('.file-upload').addEventListener('click',()=>{
         document.querySelector('.file-upload').innerHTML='<img src="./img/mark2.png" alt="mark">'
@@ -166,7 +130,7 @@ if (document.querySelector('.file-upload')){
 }
 
 
-//calendar
+//calendar initialisation---------------------------------------------------------------------------------------
 'use strict';
 
 /* eslint-disable */
@@ -624,7 +588,7 @@ if (document.querySelector('.file-upload')){
 
 
 
-// background
+// background window color----------------------------------------------------------------------------------------------------
 
 (function() {
 

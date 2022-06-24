@@ -174,6 +174,12 @@ font-weight: normal;
 			color:$font_color !important;
 			background-image: linear-gradient(315deg, rgba(255,255,255,1) 80%, $first_col 80%, $second_col 80%);
 			transition: 0.5s;
+			display: flex;
+    flex-direction: column;
+    height: 100%;
+	.card-flex{
+		flex:1;
+	}
 			&:hover{
 				transform: (scale(1.05));
 			}

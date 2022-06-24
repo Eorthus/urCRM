@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account</title>
+    <title>Clients</title>
     <link rel="stylesheet" type="text/css" href="./js/components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./js/components/datatables.net-dt/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="https://uicdn.toast.com/tui-calendar/latest/tui-calendar.css" />
+    <link rel="stylesheet" type="text/css" href="./js/components/tui-calendar/style.css" />
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="bg-img">
-   
+
+   <!--modal edit window-->
   <div class="offcanvas offcanvas-end opacity box-edit" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title text-gradient-light-red form-title" id="offcanvasRightLabel">Документ</h5>
@@ -80,8 +81,7 @@
 </div>
       </div>
     </div>
-    
-      
+        
       <textarea type="text" class="form-control form-textarea" value="
       " id="exampleFormControlInput1" placeholder="Описание"></textarea>
       <div class="form-button-group">
@@ -187,7 +187,7 @@
                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="header-notification-count">5</span>
                                 <img src="./img/notification.png" alt="notification">
-                                <!--icons from icons8.com-->
+                                <!--icons from icons8.ru-->
                             </button>
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                               <li><a class="dropdown-item" href="#">
@@ -252,6 +252,7 @@
     </header>
 <main>
     <div class="index-container">
+      <!--menu-->
         <div class="index-menu">
             <ul class="index-menu-ul">
               <li class="index-menu-ul-li nav-item"><a class="nav-link" href="case_table.html"><img src="./img/home1.png" alt="icon"> <span class="index-menu-ul-li-span">Дела</span></a></li>
@@ -264,6 +265,7 @@
               <!--icons from icons8.ru-->
               </ul>
         </div>
+        <!--main content-->
         <div class="index-window">
             <div class="index-window-panel">
                 <span class="index-window-panel-title text-gradient-light-red">Клиенты</span>
@@ -281,31 +283,6 @@
                 </div>
   
   <div class="window-buttons-select">
-  <!-- <span class="dropdown">
-  <button id="dropdownMenu-calendarType" class="dropdown-toggle custom-btn btn-8" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  
-    <span id="calendarTypeName">Статус</span>
-  
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu-calendarType">
-    <li role="presentation">
-        <a class="dropdown-menu-title" role="menuitem" data-action="toggle-daily">
-            <i class="calendar-icon ic_view_day"></i>Срочно
-        </a>
-    </li>
-    <li role="presentation">
-        <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
-            <i class="calendar-icon ic_view_week"></i>В процессе
-        </a>
-    </li>
-    <li role="presentation">
-        <a class="dropdown-menu-title" role="menuitem" data-action="toggle-monthly">
-            <i class="calendar-icon ic_view_month"></i>Исправить
-        </a>
-    </li>
-  
-  </ul>
-  </span>-->
   <span class="dropdown">
   <button id="dropdownMenu-calendarType" class="dropdown-toggle custom-btn btn-8" type="button" data-bs-toggle="dropdown" aria-expanded="false">
   
@@ -651,26 +628,6 @@
               </tbody>
             </table>
             
-            <!-- Modal -->
-            <div id="myModal" class="modal fade" role="dialog">
-              <div class="modal-dialog">
-            
-                <!-- Modal content-->
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Row information</h4>
-                  </div>
-                  <div class="modal-body">
-                    
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
-                </div>
-            
-              </div>
-            </div>
   
   
           </div>
@@ -678,14 +635,10 @@
     </div>
     </div>
 </main>
-    <footer>
-
-    </footer>
 
     <script type="text/javascript" src="./js/components/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="./js/components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" charset="utf8" src="./js/components/datatables.net/js/jquery.dataTables.js"></script>
-    <script src="./js/components/gsap/minified/gsap.min.js"></script>
     <script src="./js/calendars.js"></script>
     <script src="./js/main.js"></script>
 </body>

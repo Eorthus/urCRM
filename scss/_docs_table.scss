@@ -303,6 +303,13 @@ table.dataTable.no-footer {
     margin-left: 10px;
     margin-right: 10px;
     position: relative;
+    transition: 0.5s;
+    &:hover{
+        transform: scale(1.05);
+    }
+    &:focus{
+        transform: scale(0.95);
+    }
     img{
         width: 100%;
         object-fit: cover;
