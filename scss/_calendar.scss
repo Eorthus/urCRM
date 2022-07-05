@@ -1,10 +1,22 @@
 .lnb-calendars-d1{
     display: flex;
-    justify-content: space-between;
+  //  justify-content: space-between;
+  justify-content: left;
+
     margin-bottom: 30px;
+    label{
+        margin-right: 20px;
+        font-weight: normal;
+    }
 }
 #right{
     position: relative;
+    .account-window-tab-flex{
+        .form-control{
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+    }
 }
 .position-item{
 position: absolute;
@@ -333,5 +345,14 @@ input[type='checkbox'].tui-full-calendar-checkbox-square:checked + span {
             }
            
         }
+    }
+}
+.tui-full-calendar-popup-detail{
+    .tui-full-calendar-section-header{
+        display: flex;
+        flex-direction: column;
+    }
+    .tui-full-calendar-popup-detail-item:first-child{
+        display: none;
     }
 }

@@ -48,7 +48,7 @@ function hexToRGBA(hex) {
     calendar = new CalendarInfo();
     id += 1;
     calendar.id = String(id);
-    calendar.name = 'Срочное';
+    calendar.name = 'Не выполнено';
     calendar.color = '#ffffff';
     calendar.bgColor = '#ff0000';
     calendar.dragBgColor = '#ff0000';
@@ -58,23 +58,23 @@ function hexToRGBA(hex) {
     calendar = new CalendarInfo();
     id += 1;
     calendar.id = String(id);
-    calendar.name = 'В процессе';
+    calendar.name = 'Обратить внимание';
     calendar.color = '#ffffff';
-    calendar.bgColor = '#00ff00';
-    calendar.dragBgColor = '#00ff00';
-    calendar.borderColor = '#00ff00';
+    calendar.bgColor = '#ffff00';
+    calendar.dragBgColor = '#ffff00';
+    calendar.borderColor = '#ffff00';
     addCalendar(calendar);
 
     calendar = new CalendarInfo();
     id += 1;
     calendar.id = String(id);
-    calendar.name = 'Судебные дела';
+    calendar.name = 'Выполнено';
     calendar.color = '#ffffff';
-    calendar.bgColor = '#9e5fff';
-    calendar.dragBgColor = '#9e5fff';
-    calendar.borderColor = '#9e5fff';
+    calendar.bgColor = '#00ff00';
+    calendar.dragBgColor = '#00ff00';
+    calendar.borderColor = '#00ff00';
     addCalendar(calendar);
-
+/*
     calendar = new CalendarInfo();
     id += 1;
     calendar.id = String(id);
@@ -94,6 +94,6 @@ function hexToRGBA(hex) {
     calendar.dragBgColor = '#ff5583';
     calendar.borderColor = '#ff5583';
     addCalendar(calendar);
-
+*/
 
 })();

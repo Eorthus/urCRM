@@ -39,6 +39,7 @@ var mmin = Math.min;
  * @property {string} [dueDateClass] - The task schedule type string
  *                                   (any string value is ok and mandatory if category is 'task')
  * @property {string} [location] - The location
+ *  * @property {string} [comment] - The comment
  * @property {Array.<string>} [attendees] - The attendees
  * @property {string} [recurrenceRule] - The recurrence rule
  * @property {boolean} [isPending] - The in progress flag to do something like network job(The schedule will be transparent.)
@@ -89,7 +90,9 @@ var mmin = Math.min;
  * @property {function} [popupStateBusy] - The busy option template function in the state select box of the default creation popup
  * @property {function} [titlePlaceholder] - The title input placeholder text template function in the default creation popup
  * @property {function} [locationPlaceholder] - The location input placeholder text template function in the default creation popup
- * @property {function} [startDatePlaceholder] - The start date input placeholder text template function in the default creation popup
+  @property {function} [commentPlaceholder] - The comment input placeholder text template function in the default creation popup
+
+* @property {function} [startDatePlaceholder] - The start date input placeholder text template function in the default creation popup
  * @property {function} [endDatePlaceholder] - The end date input placeholder text template function in the default creation popup
  * @property {function} [popupSave] - The 'Save' button text template function in the default creation popup
  * @property {function} [popupUpdate] - The 'Update' button text template function in the default creation popup when in edit mode

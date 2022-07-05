@@ -51,12 +51,15 @@
     background-color: white;
     border-radius: 10px;
     background-image: linear-gradient(220deg, #002f4b8f 0%, #dc432598 15%, rgb(255, 255, 255) 10%);
+
     .search-card-content-h{
         font-size: 27px;
     margin-bottom: 30px;
+    padding-right: 120px;
     }
     .search-card-content-text{
         margin-bottom: 30px;
+        padding-right: 120px;
     flex: 1;
     }
     .search-card-content-func{
@@ -124,3 +127,29 @@
     }
 
 }
+
+    .accordion{
+        margin-top: 30px;
+        color:$font_color;
+        .accordion-item{
+            margin-bottom: 10px;
+            border-radius: 10px;
+            .accordion-button{
+                background-image: linear-gradient(45deg, white 30%, #002f4b8f 86%, #dc432598 100%);
+                border-radius: 10px;
+               font-weight: bold;
+              //  text-transform: uppercase;
+            }
+            .accordion-button:not(.collapsed){
+                color:$font_color;
+                background-color: unset;
+            }
+            .accordion-button::after {
+                background-image: url(../img/accordion.png);
+                //icon from icons8.ru
+            }
+        }
+        .accordion-body{
+            font-weight: normal;
+        }
+    }

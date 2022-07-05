@@ -6,46 +6,29 @@
     background-image: url(../img/stat1.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 5%;
+    background-size: 10%;
     background-position-x: 95%;
     background-position-y: 15%;
 }
 .stat2{
-    background-image: linear-gradient(35deg, #ffffff00 80%, #ff2a0000 80%, #00ff00 80%);
-    background-image: url(../img/stat2.png);
+    background-image: linear-gradient(35deg, #ffffff00 80%, #ff2a0000 80%, yellow 80%);
+    background-image: url(../img/stat3.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 5%;
+    background-size: 10%;
     background-position-x: 95%;
     background-position-y: 15%;
 }
 .stat3{
-    background-image: linear-gradient(35deg, #ffffff00 80%, #ff2a0000 80%, #9e5fff 80%);
-    background-image: url(../img/stat3.png);
+    background-image: linear-gradient(35deg, #ffffff00 80%, #ff2a0000 80%, #00ff00 80%);
+    background-image: url(../img/stat2.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 5%;
+    background-size: 10%;
     background-position-x: 95%;
     background-position-y: 15%;
 }
-.stat4{
-    background-image: linear-gradient(35deg, #ffffff00 80%, #ff2a0000 80%, #00a9ff 80%);
-    background-image: url(../img/stat4.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 5%;
-    background-position-x: 95%;
-    background-position-y: 15%;
-}
-.stat5{
-    background-image: linear-gradient(35deg, #ffffff00 80%, #ff2a0000 80%, #ff5583 80%);
-    background-image: url(../img/stat5.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 5%;
-    background-position-x: 95%;
-    background-position-y: 15%;
-}
+
 
 .window-buttons{
     margin-bottom: 10px;
@@ -134,10 +117,16 @@
     .dataTables_filter{
         float: unset;
         text-align: unset;
+        margin-top: 15px;
         label{
             color: white;
             input{
                 border-radius: 10px;
+                &:hover, &:focus{
+                    border-color: $light_color;
+                    outline: 0;
+                    box-shadow: 0 0 0 0.25rem $light_color;
+                }
             }
         }
     }
@@ -146,6 +135,7 @@
     right: 0;
     top: 30px;
     font-weight: normal;
+    margin-top: 15px;
     select{
         border-radius: 10px;
         &:hover, &:focus{
@@ -193,11 +183,13 @@ box-shadow:none;
        .table-btn{
         width: 25px;
         height: 25px;
-        border-radius: 100%;
+       // border-radius: 100%;
         margin: auto;
         display: block;
         border:none;
+        background-color: transparent;
         background-color: $salmon_color;
+        border-radius: 100%;
         img{
             width: 100%;
             object-fit: cover;
@@ -205,7 +197,11 @@ box-shadow:none;
         }
        }
     }
-
+.docs-table{
+    .table-btn{
+        background-color: transparent;
+    }
+}
     .dataTables_paginate {
     display: flex;
     span{
@@ -351,4 +347,63 @@ table.dataTable.no-footer {
     a{
         font-weight: normal;
     }
+}
+.modal-add{
+    .modal-header{
+        border-bottom: none;
+        color: $salmon_color;
+
+    }
+    .account-window-tab-container{
+        display: flex;
+        flex-direction: column;
+        .col-form-label{
+            margin-left: 10px;
+        }
+        .account-window-tab-flex{
+            width: 100%;
+            margin-right: 10px;
+        }
+        .dropdown-toggle{
+            min-width: 150px;
+        }
+        .modal-radio{
+            margin-left: 10px;
+        }
+        .form-check-input:focus {
+            border-color: $light_color;
+			outline: 0;
+			box-shadow: 0 0 0 0.25rem $light_color;
+    }
+    .form-check-input:checked {
+        background-color: $salmon_color;
+         border-color: $salmon_color; 
+    }
+}
+    .modal-footer{
+        border-top: none;
+        justify-content: flex-start;
+        .window-buttons-add{
+            max-width: 150px;
+        }
+    }
+
+}
+.modal-sent{
+    .sent-select{
+        margin-bottom: 0px !important;
+        margin-right: 0px !important;
+        width: 100%;
+        padding-right: calc(var(--bs-gutter-x) * .5);
+        padding-left: calc(var(--bs-gutter-x) * .5);
+    }
+    select{
+        height: 50px;
+        &:focus, &:hover {
+			border-color: $light_color;
+			outline: 0;
+			box-shadow: 0 0 0 0.25rem $light_color;
+		}
+    }
+
 }

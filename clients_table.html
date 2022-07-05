@@ -12,85 +12,381 @@
 </head>
 <body class="bg-img">
 
-   <!--modal edit window-->
-  <div class="offcanvas offcanvas-end opacity box-edit" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 class="offcanvas-title text-gradient-light-red form-title" id="offcanvasRightLabel">Документ</h5>
-      <div class="form-top-container">
-      <div class="form-img">
-        <img src="./img/20182807105210.jpg" alt="client">
+<!-- Modal sent -->
+<div class="modal fade modal-add modal-sent" id="docsSent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Отправить доверенность</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="form-edit">
-<div class="form-edit-input">
-<input type="text" class="form-control form-author" value="Анна Каренина" id="exampleFormControlInput1" placeholder="Автор">
-<input type="date" class="form-control form-date" value="12.13.1490" id="exampleFormControlInput1" placeholder="Дата">
-</div>
-<div class="form-button-group">
-  <div class="form-button-select">
-<span class="dropdown">
-  <button id="dropdownMenu-calendarType" class="dropdown-toggle custom-btn btn-8" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="modal-body ">
+        <div class="account-window-tab-container">
+          <div class="mb-3 row account-window-tab-flex sent-select">
+            <select class="form-select  account-window-tab-tariff-time" aria-label=".form-select-lg example">
+              <option selected>Кому отправляем?</option>
+              <option value="1">Каренина Анна</option>
+              <option value="2">Обломов Илья</option>
+            </select>
+          </div>
+        <div class="modal-text">
+          <div class="mb-3 row account-window-tab-flex">
+            <label for="inputTitle" class="col-sm-2 col-form-label">Название</label>
+            <div class="">
+              <input type="text" class="form-control" id="inputTitle" placeholder="Название">
+            </div>
+          </div>
+          <div class="mb-3 row account-window-tab-flex">
+            <label for="inputAbout" class="col-sm-2 col-form-label">Комментарий</label>
+            <div class="">
+              <textarea type="text" class="form-control" id="inputAbout" placeholder="Комментарий" rows="5"></textarea>
+            </div>
+          </div>
+        </div>
+        </div>
 
-      <span id="calendarTypeName">Статус</span>
-    
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu-calendarType">
-      <li role="presentation">
-          <a class="dropdown-menu-title" role="menuitem" data-action="toggle-daily">
-              <i class="calendar-icon ic_view_day"></i>Срочно
-          </a>
-      </li>
-      <li role="presentation">
-          <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
-              <i class="calendar-icon ic_view_week"></i>В процессе
-          </a>
-      </li>
-      <li role="presentation">
-          <a class="dropdown-menu-title" role="menuitem" data-action="toggle-monthly">
-              <i class="calendar-icon ic_view_month"></i>Исправить
-          </a>
-      </li>
-   
-  </ul>
-</span>
-<span class="dropdown">
-  <button id="dropdownMenu-calendarType" class="dropdown-toggle custom-btn btn-8" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      </div>
+     <div class="modal-footer">
+      <button class="window-buttons-add add custom-btn btn-8"><span>Отправить</span> </button>
+     </div>
+    </div>
+  </div>
+</div>
 
-      <span id="calendarTypeName">Категория</span>
+<!-- Modal add -->
+<div class="modal fade modal-add clients-add" id="clientsAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Добавить клиента</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <div class="account-window-tab-container">
+          <div class="form-button-group">
+         
+            <div class="form-button-select">
+            
+            <span class="dropdown">
+              <button id="dropdownMenu-calendarType" class="dropdown-toggle custom-btn btn-8" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          
+                  <span id="calendarTypeName">Категория</span>
+                
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenu-calendarType">
+                  <li role="presentation">
+                      <a class="dropdown-menu-title" role="menuitem" data-action="toggle-daily">
+                          <i class="calendar-icon ic_view_day"></i>Физ. лицо
+                      </a>
+                  </li>
+                  <li role="presentation">
+                      <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
+                          <i class="calendar-icon ic_view_week"></i>Юр. лицо
+                      </a>
+                  </li>
+                </li>
+                <li role="presentation">
+                    <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
+                        <i class="calendar-icon ic_view_week"></i>ИП
+                    </a>
+                </li>
+               
+              </ul>
+          </span>
+          <span class="dropdown">
+            <button id="dropdownMenu-calendarType" class="dropdown-toggle custom-btn btn-8" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          
+                <span id="calendarTypeName">Процессуальный статус</span>
+              
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu-calendarType">
+                <li role="presentation">
+                    <a class="dropdown-menu-title" role="menuitem" data-action="toggle-daily">
+                        <i class="calendar-icon ic_view_day"></i>Не выполнено
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
+                        <i class="calendar-icon ic_view_week"></i>Обратить внимание
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a class="dropdown-menu-title" role="menuitem" data-action="toggle-monthly">
+                        <i class="calendar-icon ic_view_month"></i>В процессе
+                    </a>
+                </li>
+             
+            </ul>
+          </span>
+        </div>
+          </div>
+
+          <div class="mb-3 row account-window-tab-flex">
+            <label for="inputTitle" class="col-sm-2 col-form-label">Наименование</label>
+            <div class="modal-padding">
+              <input type="text" class="form-control" id="inputTitle" placeholder="Наименование">
+            </div>
+          </div>
+          <div class="form-button-group">
+            <div class="input-container">
+            <label for="inputINN" class=" col-form-label">ИНН</label>
+            <input type="text" class="form-control " id="inputINN" placeholder="ИНН">
+          </div>
+          <div class="input-container">
+            <label for="inputOGRN" class=" col-form-label">ОГРН</label>
+            <input type="text" class="form-control " id="inputOGRN" placeholder="ОГРН">
+          </div>
+            <div class="input-container">
+            <label for="inputKPP" class="col-sm-2 col-form-label">КПП</label>
+            <input type="date" class="form-control form-date" id="inputKPP" placeholder="КПП">
+          </div>
+          </div>
+
+          <div class="mb-3 row account-window-tab-flex">
+            <label for="inputYrAddress" class="col-sm-2 col-form-label">Юридический адрес</label>
+            <div class="modal-flex">
+              <input type="text" class="form-control" id="inputIndex" placeholder="Индекс">
+              <input type="text" class="form-control" id="inputYrAddress" placeholder="Адрес">
+            </div>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkAddress">
+            <label class="form-check-label" for="checkAddress">
+              Адрес фактического нахождения организации совпадает с юридическим адресом организации
+            </label>
+          </div>
+          <div class="mb-3 row account-window-tab-flex">
+            <label for="inputFactAddress" class="col-sm-2 col-form-label">Адрес местонахождения</label>
+            <div class="modal-flex">
+              <input type="text" class="form-control" id="inputIndex2" placeholder="Индекс">
+              <input type="text" class="form-control" id="inputFactAddress" placeholder="Адрес">
+            </div>
+          </div>
+          <div class="form-button-group">
+            <div class="input-container">
+            <label for="inputEmail" class=" col-form-label">Email</label>
+            <input type="email" class="form-control " id="inputEmail" placeholder="Email">
+          </div>
+          <div class="input-container">
+            <label for="inputPhone" class=" col-form-label">Телефон</label>
+            <input type="phone" class="form-control "id="inputPhone" placeholder="Телефон">
+          </div>
+           
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="Foreign">
+            <label class="form-check-label" for="Foreign">
+              Иностранное
+            </label>
+          </div>
     
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenu-calendarType">
-      <li role="presentation">
-          <a class="dropdown-menu-title" role="menuitem" data-action="toggle-daily">
-              <i class="calendar-icon ic_view_day"></i>Судебные дела
-          </a>
-      </li>
-      <li role="presentation">
-          <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
-              <i class="calendar-icon ic_view_week"></i>Клиенты
-          </a>
-      </li>
-      <li role="presentation">
-          <a class="dropdown-menu-title" role="menuitem" data-action="toggle-monthly">
-              <i class="calendar-icon ic_view_month"></i>Документы
-          </a>
-      </li>
+         
+        
+        </div>
+
+      </div>
+     <div class="modal-footer">
+      <button class="window-buttons-add add custom-btn btn-8" ><span>Добавить</span> </button>
+     </div>
+    </div>
+  </div>
+</div>
+
+   <!--modal edit window-->
+  <div class="offcanvas offcanvas-end opacity box-edit box-client row" data-bs-backdrop="false" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+   <div class="left-panel col-7">
+    <div class="offcanvas-header">
+    <h5 class="offcanvas-title text-gradient-light-red form-title" id="offcanvasRightLabel">Иванов И.И.</h5>
+    <button class="window-buttons-add add custom-btn btn-8" data-bs-toggle="modal" data-bs-target="#docsSent"><span><img src="./img/sent.png" alt="sent"></span> </button>
+     
+    </div>
+    <div class="offcanvas-body">
    
-  </ul>
-</span>
-</div>
-</div>
+    <div class="accordion clients-accordion" id="accordionExample">
+      <div class="accordion-item">
+
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Документы в суд
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="offcanvas-body-scroll">
+           Место для файлов  </div>
+        </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Материалы дела
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="offcanvas-body-scroll">
+           Место для файлов </div>
+        </div>
+      </div>
+      </div>
+      <div class="accordion-item">
+        
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Сканированные документы
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="offcanvas-body-scroll">
+          Место для файлов 
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit autem voluptas sunt aliquid accusantium modi delectus repellat! Deleniti, dolorem iure. Deserunt sit, repellendus accusantium similique labore asperiores error adipisci ab.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, veritatis deleniti harum vero nesciunt et error praesentium ab mollitia soluta est repellat doloribus aliquam fugit ullam autem quam cumque qui.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, harum impedit officia obcaecati architecto nemo quo, beatae inventore ducimus amet numquam tempore earum ab error eligendi expedita ipsam dolorem repellendus?
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis pariatur error ab, mollitia delectus quam ex ipsa asperiores tenetur voluptate dolor, velit beatae incidunt. Itaque eaque atque voluptatibus quod ex.
+        
+        </div>
+        </div>
+      </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            Прочее
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <div class="offcanvas-body-scroll">
+         Место для файлов </div>
+        </div>
+        </div>
       </div>
     </div>
-        
-      <textarea type="text" class="form-control form-textarea" value="
-      " id="exampleFormControlInput1" placeholder="Описание"></textarea>
-      <div class="form-button-group">
-        <button class="custom-btn btn-8 form-button-btn"> <span>Сохранить</span> </button>
-        <div class="form-button-group-panel">
-        <a class="form-button-group-panel-item see"><img src="./img/see.png" alt="see"></a>
-        <a class="form-button-group-panel-item edit"><img src="./img/edit.png" alt="edit"></a>
-        <button class="form-button-group-panel-item del"><img src="./img/del.png" alt="delete"></button>
+    <div class="form-history">
+      <div class="form-history-container">
+        <ul class="form-history-scroll">
+<li>
+<span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+</li>
+<li>
+  <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+  </li>
+  <li>
+    <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+    </li>
+    <li>
+      <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+      </li>
+      <li>
+        <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+        </li>
+        <li>
+          <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+          </li>
+          <li>
+            <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+            </li>
+            <li>
+              <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+              </li>
+              <li>
+                <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+                </li>
+                <li>
+                  <span class="history-item"><a href="#" class="history-item-a">Исковое заявление</a></span>
+                  </li>
+        </ul>
+      
+        <button class="window-buttons-add add custom-btn btn-8"><span>Новый документ</span> </button>
+       
       </div>
+     </div>
+    </div>
+
+   </div>
+   <div class="right-panel col-5">
+    <div class="offcanvas-header">
+      <div class="offcanvas-header-container">
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title col-3">Имя</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder="ФИО/Наименование" >Иванов Иван Иванович</textarea>
+      </div>
+      </div>
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Адрес регистрации</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder="Адрес регистрации">144000, г. Москва, ул. Пушкинская 77</textarea>
+      </div>
+      </div>
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Телефон</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="phone" class="form-control" id="exampleFormControlInput1" placeholder="Телефон">+7(928)144-44-14</textarea>
+      </div>
+      </div>
+
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Электронная почта</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="Email" class="form-control" id="exampleFormControlInput1" placeholder="Email">surname@mail.ru</textarea>
+      </div>
+      </div>
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Статус</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder="Статус">Истец</textarea>
+      </div>
+      </div>
+
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Номер дела</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder="Номер дела">2-2030/2022</textarea>
+      </div>
+      </div>
+
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Суд</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder="сотрудникам">Бутырский районный суд г. Москвы</textarea>
+      </div>
+      </div>
+
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Адрес суда</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder="Адрес суда">г. Москва, Варшавское шоссе 22</textarea>
+      </div>
+      </div>
+
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Номер суда</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder="Номер суда">+7(499)499-49-49</textarea>
+      </div>
+      </div>
+
+      <div class="account-window-tab-company ">
+                 
+        <span class="account-window-tab-company-title  col-3">Кабинет заседания</span>
+       <div class="mb-3 account-window-tab-company-variable">
+        <textarea type="text" class="form-control" id="exampleFormControlInput1" placeholder="Кабинет заседания">2 этаж, каб. 219</textarea>
+      </div>
+      </div>
+      <div class="form-button-group">
+        <button class="custom-btn btn-8 form-button-btn"><span>Сохранить</span> </button></div>
       </div>
       <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
     </div>
@@ -157,20 +453,27 @@
       </div>
      </div>
     <div class="form-comment">
-      <textarea type="text" class="form-control form-comment-textarea" value="
-      " id="exampleFormControlInput1" placeholder="Комментарий"></textarea>
+      <form action="" class="comment-add">
+        <textarea type="text" class="form-control form-comment-textarea" id="exampleFormControlInput1" placeholder="Задача"></textarea>
+        <textarea type="text" class="form-control form-comment-textarea" id="exampleFormControlInput1" placeholder="Дата"></textarea>
+        <textarea type="text" class="form-control form-comment-textarea" id="exampleFormControlInput1" placeholder="Время"></textarea>
+        <textarea type="text" class="form-control form-comment-textarea" id="exampleFormControlInput1" placeholder="Статус"></textarea>
+      </form>
+    
       <button class=" custom-btn btn-8 form-comment-btn"><span>Отправить</span> </button>
     </div>
     </div>
-  </div>
 
+   </div>
+   
+  </div>
 
       <!--header-->
     <header>
         <div class="header-container">
             <nav class="navbar navbar-dark bg-light navbar-expand-md fixed-top header-navbar content">
                 <div class="container-fluid">
-                  <a class="navbar-brand glitch" data-text="ЮрПортал" href="case_table.html" >
+                  <a class="navbar-brand glitch" data-text="ЮрПортал" href="welcome.html" >
                    ЮрПортал
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -182,6 +485,27 @@
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
+                      <div class="header-sos">
+
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              
+                                <img src="./img/help.png" alt="notification">
+                                <!--icons from icons8.ru-->
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <form class="account-window-tab-company row">
+                                    <span class="account-window-tab-company-title ">Сообщение в поддержку</span>
+                                    <div class=" account-window-tab-company-variable">
+                                      <textarea type="text" class="form-control" value="
+                                      " id="exampleFormControlInput1" placeholder="Опишите проблему" rows="5"></textarea>
+                                    </div>
+                                </form>
+                                <button type="button" class="btn btn-primary index-window-panel-add-button custom-btn btn-8"><span>Отправить</span> </button>
+                      
+                            </div>
+                          </div>
+                    </div>
                       <div class="header-notification">
                         <div class="dropdown">
                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -256,12 +580,12 @@
         <div class="index-menu">
             <ul class="index-menu-ul">
               <li class="index-menu-ul-li nav-item"><a class="nav-link" href="case_table.html"><img src="./img/home1.png" alt="icon"> <span class="index-menu-ul-li-span">Дела</span></a></li>
-              <li class="index-menu-ul-li nav-item link-active"><a class="nav-link" href="clients_table.html"><img src="./img/clients1.png" alt="icon"> <span class="index-menu-ul-li-span">Клиенты</span></a></li>
-              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="docs_table.html"><img src="./img/docs1.png" alt="icon"> <span class="index-menu-ul-li-span">Документы</span></a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="clients_table.html"><img src="./img/clients1.png" alt="icon"> <span class="index-menu-ul-li-span">Клиенты</span></a></li>
               <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calendar.html"><img src="./img/calendar1.png" alt="icon"> <span class="index-menu-ul-li-span">Календарь</span> </a></li>
-              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calculator.html"><img src="./img/calc1.png" alt="icon"> <span class="index-menu-ul-li-span">Калькулятор</span> </a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="docs_table.html"><img src="./img/docs1.png" alt="icon"> <span class="index-menu-ul-li-span">Доверенности</span></a></li>
               <li class="index-menu-ul-li nav-item"><a class="nav-link" href="search_base.html"><img src="./img/paper1.png" alt="icon"> <span class="index-menu-ul-li-span">Справки</span></a></li>
-          
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calculator.html"><img src="./img/calc1.png" alt="icon"> <span class="index-menu-ul-li-span">Калькулятор</span> </a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="analytic.html"><img src="./img/analytics.png" alt="icon"> <span class="index-menu-ul-li-span">Аналитика</span></a></li>
               <!--icons from icons8.ru-->
               </ul>
         </div>
@@ -274,7 +598,7 @@
             <div class="case-container">
               <div class="window-buttons">
                 <div class="window-buttons-flex">
-                  <button class="window-buttons-add add custom-btn btn-8"><span>Добавить</span> </button>
+                  <button class="window-buttons-add add custom-btn btn-8"data-bs-toggle="modal" data-bs-target="#clientsAdd"><span>Добавить</span> </button>
   <div class="window-buttons-group">
   <button class="window-buttons-action download custom-btn btn-8"><span><img src="./img/donwload.png" alt="download"></span> </button>
   <button class="window-buttons-action delete custom-btn btn-8" ><span><img src="./img/delete.png" alt="delete"></span> </button>
@@ -292,17 +616,17 @@
   <ul class="dropdown-menu" aria-labelledby="dropdownMenu-calendarType">
     <li role="presentation">
         <a class="dropdown-menu-title" role="menuitem" data-action="toggle-daily">
-            <i class="calendar-icon ic_view_day"></i>Судебные дела
+            <i class="calendar-icon ic_view_day"></i>Физ. лицо
         </a>
     </li>
     <li role="presentation">
         <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
-            <i class="calendar-icon ic_view_week"></i>Клиенты
+            <i class="calendar-icon ic_view_week"></i>Юр. лицо
         </a>
     </li>
     <li role="presentation">
         <a class="dropdown-menu-title" role="menuitem" data-action="toggle-monthly">
-            <i class="calendar-icon ic_view_month"></i>Документы
+            <i class="calendar-icon ic_view_month"></i>ИП
         </a>
     </li>
   
@@ -312,319 +636,122 @@
   </div>
   
               </div>
-              <div id="lnb">
-                <div id="lnb-calendars" class="lnb-calendars">
-       
-                  <div class="lnb-calendars-item position-item">
-                    <label>
-                        <input class="tui-full-calendar-checkbox-square" type="checkbox" value="all" checked>
-                        <span></span>
-                        <strong>Все статусы</strong>
-                    </label>
-       
-            </div>
-              <div id="calendarList" class="lnb-calendars-d1"> 
-                
-              </div>
-  
-                </div>
-                </div>
+            
               <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                 
               <thead>
                 <tr>
                   <th>№</th>
-                  <th>Название</th>
-                  <th>Автор</th>
-                  <th>Дата</th>    
-                  <th>Статус</th>
+                  <th style="width: 100%">ФИО/Наименование</th>
+                  <th>Дата</th>
+                  <th style="display: none"></th>    
                   <th>Категория</th>
-                 <th> </th>
+                 <th>Инфо</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
                   <td>1</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>Путин В.В</td>
                   <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>Физ. лицо</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>2</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>ООО "ООО"</td>
                   <td>2016/01/15</td>
-                  <td class="stat2">В процессе</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>Юр. лицо</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>3</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>ИП Михайлов Денис Алексеевич</td>
                   <td>2016/01/15</td>
-                  <td class="stat3">Судебное</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>ИП</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>4</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>Путин В.В</td>
                   <td>2016/01/15</td>
-                  <td class="stat4">Клиент</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>Физ. лицо</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>5</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>ООО "ООО"</td>
                   <td>2016/01/15</td>
-                  <td class="stat5">Документ</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>Юр. лицо</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>6</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>ИП Михайлов Денис Алексеевич</td>
                   <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>ИП</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>7</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>Путин В.В</td>
                   <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>Физ. лицо</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>8</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>ООО "ООО"</td>
                   <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>Юр. лицо</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>9</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>ИП Михайлов Денис Алексеевич</td>
                   <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
+                  <td style="display: none"> </td>
+                  <td>ИП</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>10</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>Путин В.В</td>
                   <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
+                  <td style="display: none"> </td>
+                  <td>Физ. лицо</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
                 <tr>
                   <td>11</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
+                  <td>ООО "ООО"</td>
                   <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
+                  <td style="display: none"></td>
+                  <td>Юр. лицо</td>
                   <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
                  
                 </tr>
-                <tr>
-                  <td>12</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>13</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>14</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>15</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                
-                <tr>
-                  <td>16</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>17</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>18</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>19</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>20</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>21</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>22</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>23</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>24</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>25</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>26</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-            
-                <tr>
-                  <td>27</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
-                <tr>
-                  <td>28</td>
-                  <td><a href="#"> Документ </a></td>
-                  <td><a href="#">Анна Каренина</a></td>
-                  <td>2016/01/15</td>
-                  <td class="stat1">Срочно</td>
-                  <td>Судебное</td>
-                  <td><button class="table-btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><img src="./img/info.png" alt="edit"></button></td>
-                 
-                </tr>
+               
+             
+               
               </tbody>
             </table>
             

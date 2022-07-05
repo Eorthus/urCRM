@@ -10,13 +10,44 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="bg-img">
+ <!-- Modal add -->
+ <div class="modal fade modal-add case-add" id="accountAdd" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Добавить сотрудника</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body ">
+        <div class="account-window-tab-container">
+          <label for="inputBuild" class=" col-form-label">Отдел</label>
+          <input type="text" class="form-control form-sud form-fio" id="inputBuild" placeholder="Отдел">
+          <label for="inputJob" class=" col-form-label">Должность</label>
+          <input type="text" class="form-control form-sud" id="inputJob" placeholder="Должность">
+  
+          <label for="inputPassport" class=" col-form-label">Паспортные данные</label>
+          <textarea type="text" class="form-control form-textarea" value="
+          " id="inputPassport" placeholder="Паспортные данные"></textarea>
+
+          <label for="inputDiplom" class=" col-form-label">Диплом, сертификат, удостоверение</label>
+          <textarea type="text" class="form-control form-textarea" value="
+          " id="inputDiplom" placeholder="Диплом, сертификат, удостоверение"></textarea>
+        </div>
+
+      </div>
+     <div class="modal-footer">
+      <button class="window-buttons-add add custom-btn btn-8" ><span>Сохранить</span> </button>
+     </div>
+    </div>
+  </div>
+</div>
 
       <!--header-->
     <header>
         <div class="header-container">
             <nav class="navbar navbar-dark bg-light navbar-expand-md fixed-top header-navbar content">
                 <div class="container-fluid">
-                  <a class="navbar-brand glitch" data-text="ЮрПортал" href="case_table.html" >
+                  <a class="navbar-brand glitch" data-text="ЮрПортал" href="welcome.html" >
                    ЮрПортал
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -28,6 +59,27 @@
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
+                      <div class="header-sos">
+
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              
+                                <img src="./img/help.png" alt="notification">
+                                <!--icons from icons8.ru-->
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <form class="account-window-tab-company row">
+                                    <span class="account-window-tab-company-title ">Сообщение в поддержку</span>
+                                    <div class=" account-window-tab-company-variable">
+                                      <textarea type="text" class="form-control" value="
+                                      " id="exampleFormControlInput1" placeholder="Опишите проблему" rows="5"></textarea>
+                                    </div>
+                                </form>
+                                <button type="button" class="btn btn-primary index-window-panel-add-button custom-btn btn-8"><span>Отправить</span> </button>
+                      
+                            </div>
+                          </div>
+                    </div>
                       <div class="header-notification">
                         <div class="dropdown">
                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -103,10 +155,11 @@
             <ul class="index-menu-ul">
                 <li class="index-menu-ul-li nav-item"><a class="nav-link" href="case_table.html"><img src="./img/home1.png" alt="icon"> <span class="index-menu-ul-li-span">Дела</span></a></li>
                 <li class="index-menu-ul-li nav-item"><a class="nav-link" href="clients_table.html"><img src="./img/clients1.png" alt="icon"> <span class="index-menu-ul-li-span">Клиенты</span></a></li>
-                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="docs_table.html"><img src="./img/docs1.png" alt="icon"> <span class="index-menu-ul-li-span">Документы</span></a></li>
                 <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calendar.html"><img src="./img/calendar1.png" alt="icon"> <span class="index-menu-ul-li-span">Календарь</span> </a></li>
-                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calculator.html"><img src="./img/calc1.png" alt="icon"> <span class="index-menu-ul-li-span">Калькулятор</span> </a></li>
+                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="docs_table.html"><img src="./img/docs1.png" alt="icon"> <span class="index-menu-ul-li-span">Доверенности</span></a></li>
                 <li class="index-menu-ul-li nav-item"><a class="nav-link" href="search_base.html"><img src="./img/paper1.png" alt="icon"> <span class="index-menu-ul-li-span">Справки</span></a></li>
+                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calculator.html"><img src="./img/calc1.png" alt="icon"> <span class="index-menu-ul-li-span">Калькулятор</span> </a></li>
+                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="analytic.html"><img src="./img/analytics.png" alt="icon"> <span class="index-menu-ul-li-span">Аналитика</span></a></li>
              <!--icons from icons8.ru-->
               </ul>
         </div>
@@ -143,26 +196,40 @@
               </div>
               <div class="account-window-tab-container">
                 <div class="mb-3 row account-window-tab-flex">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+                  <label for="inputINN" class="col-sm-2 col-form-label">ИНН</label>
                   <div class="col-sm-10">
-                    <input type="Email" class="form-control" id="inputPassword" placeholder="name@mail.ru">
+                    <input type="text" class="form-control" id="inputINN" placeholder="ИНН">
                   </div>
                 </div>
                 <div class="mb-3 row account-window-tab-flex">
-                  <label for="inputPassword" class="col-sm-2 col-form-label" >Пароль</label>
+                  <label for="inputJob" class="col-sm-2 col-form-label" >Должность</label>
                   <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="**********">
+                    <input type="text" class="form-control" id="inputJob" placeholder="Адвокат">
                   </div>
                 </div>
               </div>
               <div class="account-window-tab-container">
                 <div class="mb-3 row account-window-tab-flex">
-                  <label for="inputPassword" class="col-sm-2 col-form-label">Должность</label>
-                  <div class="col-sm-11">
-                    <input type="Name" class="form-control" id="inputPassword" placeholder="Адвокат">
+                  <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                  <div class="col-9">
+                    <input type="Email" class="form-control" id="inputEmail" placeholder="name@mail.ru">
+                  </div>
+                </div>
+                <div class="mb-3 row account-window-tab-flex">
+                  <label for="inputPassword" class="col-sm-2 col-form-label" >Пароль</label>
+                  <div class="col-9">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="**********">
+                  </div>
+                </div>
+                <div class="mb-3 row account-window-tab-flex">
+                  <label for="inputPhone" class="col-sm-2 col-form-label" >Телефон</label>
+                  <div class="col-9">
+                    <input type="phone" class="form-control" id="inputPhone" placeholder="+7(999)999-99-99">
                   </div>
                 </div>
               </div>
+             
+    
 
 <div class="index-window-panel-add">
   <div class="mb-3 account-window-tab-flex">
@@ -178,7 +245,7 @@
                 <!--tariffs-->
               <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
                 <div class="account-window-tab-current">
-                  <span class="account-window-tab-current-title ">Текущий тариф:</span>
+                  <span class="account-window-tab-current-title ">Текущий тариф	&ndash;&nbsp;</span>
                   <span class="account-window-tab-current-variable">Базовый</span>
                 </div>
                 <div class="account-window-tab-tariff">
@@ -191,22 +258,85 @@
                       </select>
 
                       <div class="account-window-tab-tariff-price">
-                        <span class="account-window-tab-tariff-price-sum text-gradient-light-red">5990</span>
+                        <span class="account-window-tab-tariff-price-sum text-gradient-light-red">1799</span>
                         <span class="account-window-tab-tariff-price-val">руб.</span>
                       </div>
 
                       <ul class="account-window-tab-tariff-preference">
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">3</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Опции</span>
+                          <span class="account-window-tab-tariff-preference-li-span">Количество пользователей</span>
+                          <span class="account-window-tab-tariff-preference-li-b">1</span>
+                        
                         </li>
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">90%</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Другой пункт</span>
+                          <span class="account-window-tab-tariff-preference-li-span">CRM система</span>
+                          <span class="account-window-tab-tariff-preference-li-b no"></span>
+             
                         </li>
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">10 Гб</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Свободного пространства</span>
+                          <span class="account-window-tab-tariff-preference-li-span">Планировщик задач</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Таблица дел</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Создание документов</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Шаблоны юридических документов</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Подпись документа в электронном виде</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Раздел "Доверенности</span>
+                          <span class="account-window-tab-tariff-preference-li-b no"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Уведомление клиентов</span>
+                          <span class="account-window-tab-tariff-preference-li-b">Доп. услуга</span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Личный кабинет руководителя</span>
+                          <span class="account-window-tab-tariff-preference-li-b no"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Постановка задач сотрудникам</span>
+                          <span class="account-window-tab-tariff-preference-li-b no"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Аналитика компании</span>
+                          <span class="account-window-tab-tariff-preference-li-b no"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Защищенный сервер</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Резервное копирование</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Поддержка 24/7</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
                         </li>
                       </ul>
                     </div>
@@ -222,22 +352,85 @@
                       </select>
 
                       <div class="account-window-tab-tariff-price">
-                        <span class="account-window-tab-tariff-price-sum text-gradient-light-red">5990</span>
+                        <span class="account-window-tab-tariff-price-sum text-gradient-light-red">4999</span>
                         <span class="account-window-tab-tariff-price-val">руб.</span>
                       </div>
 
                       <ul class="account-window-tab-tariff-preference">
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">3</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Опции</span>
+                          <span class="account-window-tab-tariff-preference-li-span">Количество пользователей</span>
+                          <span class="account-window-tab-tariff-preference-li-b">До 5</span>
+                        
                         </li>
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">90%</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Другой пункт</span>
+                          <span class="account-window-tab-tariff-preference-li-span">CRM система</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
                         </li>
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">10 Гб</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Свободного пространства</span>
+                          <span class="account-window-tab-tariff-preference-li-span">Планировщик задач</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Таблица дел</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Создание документов</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Шаблоны юридических документов</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Подпись документа в электронном виде</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Раздел "Доверенности</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Уведомление клиентов</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Личный кабинет руководителя</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Постановка задач сотрудникам</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Аналитика компании</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Защищенный сервер</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Резервное копирование</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Поддержка 24/7</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
                         </li>
                       </ul>
                     </div>
@@ -253,22 +446,85 @@
                       </select>
 
                       <div class="account-window-tab-tariff-price">
-                        <span class="account-window-tab-tariff-price-sum text-gradient-light-red">5990</span>
+                        <span class="account-window-tab-tariff-price-sum text-gradient-light-red">По запросу</span>
                         <span class="account-window-tab-tariff-price-val">руб.</span>
                       </div>
 
                       <ul class="account-window-tab-tariff-preference">
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">3</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Опции</span>
+                          <span class="account-window-tab-tariff-preference-li-span">Количество пользователей</span>
+                          <span class="account-window-tab-tariff-preference-li-b">От 5</span>
+                        
                         </li>
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">90%</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Другой пункт</span>
+                          <span class="account-window-tab-tariff-preference-li-span">CRM система</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
                         </li>
                         <li class="account-window-tab-tariff-preference-li">
-                          <span class="account-window-tab-tariff-preference-li-b">10 Гб</span>
-                          <span class="account-window-tab-tariff-preference-li-span">Свободного пространства</span>
+                          <span class="account-window-tab-tariff-preference-li-span">Планировщик задач</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Таблица дел</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Создание документов</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Шаблоны юридических документов</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Подпись документа в электронном виде</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Раздел "Доверенности</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Уведомление клиентов</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Личный кабинет руководителя</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Постановка задач сотрудникам</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Аналитика компании</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Защищенный сервер</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                        
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Резервное копирование</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+             
+                        </li>
+                        <li class="account-window-tab-tariff-preference-li">
+                          <span class="account-window-tab-tariff-preference-li-span">Поддержка 24/7</span>
+                          <span class="account-window-tab-tariff-preference-li-b yes"></span>
+                
                         </li>
                       </ul>
                       </div>
@@ -289,17 +545,128 @@
                 </div>
                 </div>
                 <div class="account-window-tab-company row">
-                  <span class="account-window-tab-company-title col-2">Описание</span>
+                  <span class="account-window-tab-company-title col-2">О компании</span>
                   <div class="mb-3 col-9 account-window-tab-company-variable">
                     <textarea type="text" class="form-control" value="
                     " id="exampleFormControlInput1" placeholder="Описание компании" rows="7"></textarea>
                   </div>
         
                 </div>
+
+                <div class="account-window-tab-company row">
+                 
+                  <span class="account-window-tab-company-title col-2">Вид деятельности</span>
+                 <div class="mb-3 col-9 account-window-tab-company-variable">
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Вид деятельности">
+                </div>
+                </div>
+
+                <div class="account-window-tab-company row">
+                  <span class="account-window-tab-company-title col-2">График работы</span>
+                  <div class="mb-3 col-9 account-window-tab-company-variable">
+                    <textarea type="text" class="form-control" value="
+                    " id="exampleFormControlInput1" placeholder="График работы" rows="7"></textarea>
+                  </div>
+        
+                </div>
+
                 
+                <div class="account-window-tab-company row">
+                  <span class="account-window-tab-company-title col-2">Контакты</span>
+                  <div class="mb-3 col-9 account-window-tab-company-variable">
+                    <textarea type="text" class="form-control" value="
+                    " id="exampleFormControlInput1" placeholder="Контакты" rows="7"></textarea>
+                  </div>
+        
+                </div>
+
+                <div class="account-window-tab-company row">
+                 
+                  <span class="account-window-tab-company-title col-2">Руководитель</span>
+                 <div class="mb-3 col-9 account-window-tab-company-variable">
+                  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Руководитель">
+                </div>
+                </div>
+
+                <div class="account-window-tab-company row">
+                 
+                  <span class="account-window-tab-company-title col-2">ИНН</span>
+                 <div class="mb-3 col-9 account-window-tab-company-variable">
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="ИНН">
+                </div>
+                </div>
+
+                <div class="account-window-tab-company row">
+                 
+                  <span class="account-window-tab-company-title col-2">КПП</span>
+                 <div class="mb-3 col-9 account-window-tab-company-variable">
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="КПП">
+                </div>
+                </div>
+                <div class="account-window-tab-company row">
+                 
+                  <span class="account-window-tab-company-title col-2">ОГРН/ОГРНИП</span>
+                 <div class="mb-3 col-9 account-window-tab-company-variable">
+                  <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="ОГРН/ОГРНИП">
+                </div>
+                </div>
+                <div class="account-window-tab-company row">
+                  <span class="account-window-tab-company-title col-2">Банковские реквизиты</span>
+                  <div class="mb-3 col-9 account-window-tab-company-variable">
+                    <textarea type="text" class="form-control" value="
+                    " id="exampleFormControlInput1" placeholder="Банковские реквизиты" rows="7"></textarea>
+                  </div>
+        
+                </div>
+
+                <div class="account-staff">
+                  <span class="account-staff-number"> Сотрудник №1</span>
+
+                  <div class="account-window-tab-company row">
+                 
+                    <span class="account-window-tab-company-title col-2">Отдел</span>
+                   <div class="mb-3 col-9 account-window-tab-company-variable">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Отдел">
+                  </div>
+
+                  </div>
+
+                  <div class="account-window-tab-company row">
+                 
+                    <span class="account-window-tab-company-title col-2">Должность</span>
+                   <div class="mb-3 col-9 account-window-tab-company-variable">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Должность">
+                  </div>
+
+                  </div>
+
+                  <div class="account-window-tab-company row">
+                    <span class="account-window-tab-company-title col-2">Паспортные данные</span>
+                    <div class="mb-3 col-9 account-window-tab-company-variable">
+                      <textarea type="text" class="form-control" value="
+                      " id="exampleFormControlInput1" placeholder="Паспортные данные" rows="7"></textarea>
+                    </div>
+          
+                  </div>
+
+                  
+                  <div class="account-window-tab-company row">
+                    <span class="account-window-tab-company-title col-2">Диплом, сертификат, удостоверение</span>
+                    <div class="mb-3 col-9 account-window-tab-company-variable">
+                      <textarea type="text" class="form-control" value="
+                      " id="exampleFormControlInput1" placeholder="Диплом, сертификат, удостоверение" rows="7"></textarea>
+                    </div>
+          
+                  </div>
+                </div>
+                
+<div class="account-company-footer">
 <div class="index-window-panel-add">
   <button type="button" class="btn btn-primary index-window-panel-add-button custom-btn btn-8"><span>Сохранить</span> </button>
+  <button class="window-buttons-action download custom-btn btn-8"><span><img src="./img/donwload.png" alt="download"></span> </button>
 
+</div>
+<button type="button" class="btn btn-primary index-window-panel-add-button custom-btn btn-8" data-bs-toggle="modal" data-bs-target="#accountAdd"><span>Добавить сотрудника</span> </button>
 </div>
               </div>
             </div>

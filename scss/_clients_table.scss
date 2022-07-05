@@ -21,3 +21,263 @@
         }
     }
 }
+.left-position{
+    left:170px;
+}
+.box-client{
+    width:81% !important;
+    display: flex;
+    flex-direction: row;
+
+    .left-panel{
+        .offcanvas-header{
+            height: unset;
+            flex-direction: row;
+    align-items: center;
+            min-height: unset;
+            padding-top: 35px;
+    padding-bottom: 15px;
+    .window-buttons-add{
+      max-width:50px;
+      img{
+        width: 60%;
+      }
+    }
+        }
+        .clients-accordion{
+            .accordion{
+                margin-top: 15px;
+            }
+            .accordion-button{
+                background-image: linear-gradient(270deg, white 30%, #002f4b8f 86%, #dc432598 100%);
+                color: white;
+                font-size: 18px;
+            }
+            .accordion-body{
+                font-size: 16px;
+            }
+            .accordion-button::after {
+                background-image:  var(--bs-accordion-btn-icon);
+            }
+
+        }
+        .form-history{
+            height: 100%;
+            .form-history-container{
+              //  height: unset;
+              position: relative;
+              height: 100%;
+                .form-history-scroll{
+                  //  position:unset;
+                  position: absolute;
+                  top: 10px;
+                  right: 25px;
+                  left: 0px;
+                  bottom: 470px;
+                  overflow-x: hidden;
+                  overflow-y: scroll;
+                  margin-bottom: 0;
+                  li{
+                     margin-left: 0px;
+                     &:before{
+                        content:none;
+                     }
+                     &::after{
+                        content:none;
+                     }
+                  }
+                }
+                .window-buttons-add{
+                    position: fixed;
+    bottom: 10px;
+                }
+            }
+        }
+        .offcanvas-body{
+            height: 100%;
+            .offcanvas-body-scroll{
+                overflow-y: scroll;
+                width: 100%;
+                max-height: 500px;
+                padding-right: 15px;
+    &::-webkit-scrollbar {
+    
+        width: 6px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+        border-radius: 4px;
+        background-image: $gradient_color;
+        }
+        
+        &::-webkit-scrollbar-track {
+        border-radius: 4px;
+        background-color: rgba(black,0.1);
+        
+        }
+            
+            }
+        }
+
+    }
+    .right-panel{
+        box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+        height:100%;
+        .offcanvas-header{
+            height: 40%;
+            padding-bottom: 5%;
+            .btn-close{
+              top: 10px;
+        /* right: 25px; */
+        left: 10px;
+            }
+            .offcanvas-header-container{
+                overflow-y: auto;
+                width: 100%;
+                padding-right: 15px;
+&::-webkit-scrollbar {
+
+    width: 6px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-image: $gradient_color;
+    }
+    
+    &::-webkit-scrollbar-track {
+    border-radius: 4px;
+    background-color: rgba(black,0.1);
+    
+    }
+            }
+        }
+        .offcanvas-body{
+            height: 60%;
+            .form-history{
+                height: 70%;
+            }
+            .comment-add{
+                display: flex;
+                height: 70%;
+                textarea{
+                    margin-right: 10px;
+                    height: unset;
+                    min-height: unset;
+&:last-child{
+    margin-right: 0;
+}
+                }
+            }
+            .form-comment{
+                width: 100%;
+                height: 30%;
+
+                position: unset;
+                margin: 0;
+                padding-top: 5%;
+            }
+            .form-history-container{
+                height: 100%;
+                .form-history-scroll{
+                    height: 100%;
+                    position: unset;
+                }
+            }
+        }
+        .account-window-tab-company{
+            display: flex;
+    width: 100%;
+    align-items: baseline;
+    .account-window-tab-company-title{
+        margin-right: 10px;
+    }
+    .account-window-tab-company-variable{
+        width: 100%;
+    }
+        }
+    }
+}
+.clients-add{
+    label{
+        width: 100%;
+        margin-left: 0 !important;
+    }
+    .form-button-select{
+        display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+    .dropdown{
+        width: 100%;
+        .btn-8::after{
+            top: 50%;
+            right: 10%;
+            background: TRANSPARENT;
+        }
+        .dropdown-toggle{
+          background-color: #f0ecfc;
+          min-width: 100px;
+          position: relative;
+  
+          &:hover{
+              background-color: transparent;
+          }
+          &:hover::after{
+              width: 98%;
+               display: inline-block; 
+       margin-left: unset;
+       vertical-align: unset;
+     border:none;
+     top:unset;
+     right:0;
+     background: #002f4b8f;
+  }
+  }
+        &:first-child{
+            margin-right: 15px;
+            max-width: 200px;
+        }
+        .dropdown-toggle{
+            max-width: unset;
+            span{
+                max-width: unset;
+            }
+        }
+        .dropdown-menu{
+            width: 100%;
+            li{
+                padding: 5px 10px;
+            }
+        }
+    }
+    }
+    .account-window-tab-flex{
+        margin-right:0 !important;
+        margin-left: 0px;
+        .modal-padding{
+            padding:0;
+        }
+    }
+    .form-button-group{
+        display: flex;
+        .input-container{
+            width: 100%;
+        }
+        .input-container:nth-child(2), .input-container:nth-child(3){
+            margin-left: 15px;
+        }
+    }
+    .modal-flex{
+        display: flex;
+        padding:0;
+        .form-control:first-child{
+            margin-right: 15px;
+        }
+    }
+    .form-check{
+        margin-left: 10px;
+        &:last-child{
+            margin-top: 15px;
+        }
+    }
+}

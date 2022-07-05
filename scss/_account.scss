@@ -104,6 +104,22 @@ overflow: hidden;
 					}
 				}
 			}
+			.index-window-panel-add-button{
+				margin-right: 30px;
+			}
+			.window-buttons-action{
+                max-width: 60px;
+                width: 100%;
+                margin-right: 10px;
+                span{
+                    width: 60px;
+               // height: 60px;
+                background-size: 100%;
+                }
+                img{
+                    width: 30px;
+                }
+            }
 				}
 	}
 	.account-window-tab-company{
@@ -143,7 +159,7 @@ font-weight: normal;
 	.account-window-tab-current{
 		display: flex;
     font-weight: normal;
-	justify-content: space-around;
+	justify-content: center;
 	font-size: var(--main_size);
 	.account-window-tab-current-variable{
 		color: $salmon_color;
@@ -152,10 +168,19 @@ font-weight: normal;
 	}
 	.account-window-tab-ul{
 		margin-top:30px;
-		.account-window-tab-tariff-ul-li{
-			padding:20px;
-			box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
-		}
+	//	.account-window-tab-tariff-ul-li{
+	//		padding:20px;
+	//		box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+	//		 a{
+	//			background-image: linear-gradient(320deg, white 88%, #002f4b8f 80%, #dc432598 80%);
+	//		}
+		//	&:nth-child(2) a{
+		//		background-image: linear-gradient(320deg, white 88%, #002f4b8f 80%, #25dcab98 80%);
+		//	}
+		//	&:nth-child(3) a{
+		//		background-image: linear-gradient(320deg, white 88%, #002f4b8f 80%, #9925dc98 80%);
+		//	}
+	//	}
 	}
 	.account-window-tab-tariff-ul{
 		margin-top:40px;
@@ -165,18 +190,32 @@ font-weight: normal;
 	.col-4{
 		width: 31%;
 	}
+	.account-window-tab-tariff-ul-li{
+		
+	//	box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6) inset;
+		 a{
+			background-image: linear-gradient(320deg, white 90%, #002f4b8f 80%, #dc432598 80%);
+		}
+		&:nth-child(2) a{
+			background-image: linear-gradient(320deg, white 90%, #002f4b8f 80%, #002f4b8f 80%);
+	}
+		&:nth-child(3) a{
+			background-image: linear-gradient(320deg, white 90%, #002f4b8f 80%, #deb00998 80%);
+		}
+	}
 		.account-window-tab-tariff-ul-li a{
 			border-radius: 10px;
 			box-shadow: 0px 0px 9px 1px rgba(34, 60, 80, 0.2);
-			background-color: white;
+			//background-color: white;
 			padding: 20px;
 			display: block;
 			color:$font_color !important;
-			background-image: linear-gradient(315deg, rgba(255,255,255,1) 80%, $first_col 80%, $second_col 80%);
+			
 			transition: 0.5s;
 			display: flex;
     flex-direction: column;
     height: 100%;
+	
 	.card-flex{
 		flex:1;
 	}
@@ -213,6 +252,7 @@ font-weight: normal;
 		font-size: var(--h_size);
     color: $salmon_color;
 	font-weight: normal;
+	text-align: center;
 	}
 	.account-window-tab-tariff-price-val{
 		font-weight: normal;
@@ -224,12 +264,15 @@ font-weight: normal;
     justify-content: space-between;
     padding: 10px 0px 10px 0px;
 	align-items: center;
+	position: relative;
 .account-window-tab-tariff-preference-li-b{
-	white-space: nowrap;
+//	white-space: nowrap;
+text-align: end;
 }
 	.account-window-tab-tariff-preference-li-span{
 		font-weight: normal;
-		text-align: end;
+		text-align: start;
+		padding-right: 60px;
 	}
 				}
 			}
@@ -240,6 +283,66 @@ font-weight: normal;
     margin-left: auto;
 			}
 		}
+
+
 	}
 
 	}
+
+.yes::after{
+	content: "+";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: center;
+    top: -5px;
+    right: 0;
+    background: #00ff00;
+    color: white;
+    border-radius: 100%;
+    /* text-align: center; */
+    /* margin-bottom: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.no, .yes{
+	position: relative;
+}
+.no::after{
+	content: "-";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    top: center;
+    top: -5px;
+    right: 0;
+    background: red;
+    color: white;
+    border-radius: 100%;
+    /* text-align: center; */
+    /* margin-bottom: 5px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-staff{
+	padding-top: 30px;
+	.account-staff-number{
+		color: $font_color;
+		display: block;
+		margin-bottom: 30px;
+	}
+}
+.account-company-footer{
+	display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+	.index-window-panel-add{
+		margin-top:0 !important;
+		button:first-child{
+			min-width: 150px;
+		}
+	}
+}
