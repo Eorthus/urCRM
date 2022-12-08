@@ -8,6 +8,67 @@
        position: absolute;
        .offcanvas-body{
         justify-content: flex-end;
+        .header-sos{
+            width: 38px;
+            position: relative;
+            height: 38px;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-right: 35px;
+            transition: 0.5s;
+            &:hover{
+        transform:scale(1.1)
+            }
+            &:active{
+                transform:scale(0.9)
+            }
+            .dropdown-toggle{
+                border: none;
+                background: transparent;
+                &::after{
+                    display: none;
+                }
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .dropdown-menu{
+                background-image: linear-gradient(45deg,rgba(255,255,255,1) 87%, #f4dac980 0% ) ;
+                max-width: 600px;
+                right: 10px;
+            border-radius: 10px 0px 10px 10px;
+            left: unset;
+            padding-bottom: 0;
+            padding-top: 0;
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            border:none;
+            padding: 15px;
+    min-width: 400px;
+    .account-window-tab-company{
+        display: flex;
+    flex-direction: column;
+    .account-window-tab-company-title{
+        color:$salmon_color;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .account-window-tab-company-variable{
+        padding-top: 15px;
+        margin-bottom: 0;
+    }
+    }
+        a{
+            background-color: transparent;
+        }
+        
+        
+            } 
+            .index-window-panel-add-button{
+                margin-top: 15px;
+    max-width: 120px;
+            }  
+        }
         .header-notification{
             width: 38px;
     position: relative;
@@ -63,7 +124,6 @@ padding-bottom: 0.5rem;
         display: flex;
         transition: 0.5s;
         &:hover{
-            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2) inset !important;
             .header-notification-button{
                 transform: scale(1.1);
             }
@@ -246,10 +306,25 @@ img{
             }
         }
         .header-account{
+            transition: 0.5s;
+            &:hover{
+        transform:scale(1.1)
+            }
+            &:active{
+                transform:scale(0.9)
+            }
+            .header-navbar-icon{
+                &:hover{
+                    transform:scale(1.05);
+                }
+                &:active{
+                    transform:scale(0.99)
+                }
+            }
                     .dropdown-menu[data-bs-popper] {
-            top: 79px;
-            left: unset;
-            right: -$main_padding;
+           // top: 79px;
+           // left: unset;
+           // right: -$main_padding;
               border: none;
             border-radius: 0px 0px 10px 10px;
             min-width: 250px;
@@ -258,7 +333,13 @@ img{
 
         }
         .dropdown-menu{
-           
+            right: 10px;
+            border-radius: 10px 0px 10px 10px;
+            left: unset;
+            padding-bottom: 0;
+            padding-top: 0;
+            box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+            border:none;
             .header-account-top{
                 display: flex;
                 justify-content: space-between;

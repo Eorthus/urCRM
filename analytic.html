@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calendar</title>
+    <title>Welcome</title>
     <link rel="stylesheet" type="text/css" href="./js/components/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="./js/components/datatables.net-dt/css/jquery.dataTables.css">
-    <link rel="stylesheet" type="text/css" href="./js/components/tui-calendar/tui-time-picker.css">
-    <link rel="stylesheet" type="text/css" href="./js/components/tui-calendar/tui-date-picker.css">
-    <link rel="stylesheet" type="text/css" href="./js/components/tui-calendar/style.css" />
-       <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body class="bg-img">
+
       <!--header-->
     <header>
         <div class="header-container">
@@ -30,28 +28,29 @@
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
-                      <div class="header-sos">
+                        <div class="header-sos">
 
-                        <div class="dropdown">
-                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                              
-                                <img src="./img/help.png" alt="notification">
-                                <!--icons from icons8.ru-->
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                <form class="account-window-tab-company row">
-                                    <span class="account-window-tab-company-title ">Сообщение в поддержку</span>
-                                    <div class=" account-window-tab-company-variable">
-                                      <textarea type="text" class="form-control" value="
-                                      " id="exampleFormControlInput1" placeholder="Опишите проблему" rows="5"></textarea>
-                                    </div>
-                                </form>
-                                <button type="button" class="btn btn-primary index-window-panel-add-button custom-btn btn-8"><span>Отправить</span> </button>
-                      
-                            </div>
-                          </div>
-                    </div>
+                            <div class="dropdown">
+                                <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  
+                                    <img src="./img/help.png" alt="notification">
+                                    <!--icons from icons8.ru-->
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                    <form class="account-window-tab-company row">
+                                        <span class="account-window-tab-company-title ">Сообщение в поддержку</span>
+                                        <div class=" account-window-tab-company-variable">
+                                          <textarea type="text" class="form-control" value="
+                                          " id="exampleFormControlInput1" placeholder="Опишите проблему" rows="5"></textarea>
+                                        </div>
+                                    </form>
+                                    <button type="button" class="btn btn-primary index-window-panel-add-button custom-btn btn-8"><span>Отправить</span> </button>
+                          
+                                </div>
+                              </div>
+                        </div>
                       <div class="header-notification">
+                        
                         <div class="dropdown">
                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                 <span class="header-notification-count">5</span>
@@ -131,101 +130,52 @@
               <li class="index-menu-ul-li nav-item"><a class="nav-link" href="search_base.html"><img src="./img/paper1.png" alt="icon"> <span class="index-menu-ul-li-span">Справки</span></a></li>
               <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calculator.html"><img src="./img/calc1.png" alt="icon"> <span class="index-menu-ul-li-span">Калькулятор</span> </a></li>
               <li class="index-menu-ul-li nav-item"><a class="nav-link" href="analytic.html"><img src="./img/analytics.png" alt="icon"> <span class="index-menu-ul-li-span">Аналитика</span></a></li>
-              <!--icons from icons8.ru-->
+                        <!--icons from icons8.ru-->
               </ul>
         </div>
         <!--main content-->
         <div class="index-window">
             <div class="index-window-panel">
-                <span class="index-window-panel-title text-gradient-light-red">Календарь</span>
-                
+                <span class="index-window-panel-title text-gradient-light-red">Аналитика</span>
+
             </div>
-
-          <div id="right">
-              <div id="menu" class="calendar-menu">
-                  <span class="dropdown">
-                      <button id="dropdownMenu-calendarType" class="dropdown-toggle custom-btn btn-8" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                 
-                          <span id="calendarTypeName">Dropdown</span>
-                        
-                      </button>
-                      <ul class="dropdown-menu" aria-labelledby="dropdownMenu-calendarType">
-                          <li role="presentation">
-                              <a class="dropdown-menu-title" role="menuitem" data-action="toggle-daily">
-                                  <i class="calendar-icon ic_view_day"></i>День
-                              </a>
-                          </li>
-                          <li role="presentation">
-                              <a class="dropdown-menu-title" role="menuitem" data-action="toggle-weekly">
-                                  <i class="calendar-icon ic_view_week"></i>Неделя
-                              </a>
-                          </li>
-                          <li role="presentation">
-                              <a class="dropdown-menu-title" role="menuitem" data-action="toggle-monthly">
-                                  <i class="calendar-icon ic_view_month"></i>Месяц
-                              </a>
-                          </li>
-                       
-                      </ul>
-                  </span>
-      
-                  <span id="menu-navi">
-                      <button type="button" class="btn btn-default btn-sm move-day custom-btn btn-8" data-action="move-prev">
-                          <span class="calendar-icon ic-arrow-line-left" data-action="move-prev">	
-                            &#10092;</span>
-                      </button>
-                      <span id="renderRange" class="render-range"></span>
-                      <button type="button" class="btn btn-default btn-sm move-day custom-btn btn-8" data-action="move-next">
-                          <span class="calendar-icon ic-arrow-line-right" data-action="move-next"> &#10093;</span>
-                      </button>
-                      <i id="calendarTypeIcon" class="calendar-icon ic_view_month" style="margin-right: 4px;"></i>
-                      <i class="calendar-icon tui-full-calendar-dropdown-arrow">	
-                       </i>
-      
-                  </span>
-              
+            <div class="analytic-container row">
+              <div class="analytic-item col-6">
+                <span class="analytic-h1">Лиды</span>
+                <span class="analytic-sum">Общее количество лидов - <span class="analytic-sum-span">6</span></span>
+                <canvas id="lids">
               </div>
-              <div id="lnb">
-                <div id="lnb-calendars" class="lnb-calendars">
-       
-                  <div class="lnb-calendars-item position-item">
-                    <label>
-                        <input class="tui-full-calendar-checkbox-square" type="checkbox" value="all" checked>
-                        <span></span>
-                        <strong>Все статусы</strong>
-                    </label>
-       
-            </div>
-              <div id="calendarList" class="lnb-calendars-d1"> 
-                
+              <div class="analytic-item col-6">
+                <span class="analytic-h1">Клиенты</span>
+                <span class="analytic-sum">Общее количество дел - <span class="analytic-sum-span">15</span></span>
+                <canvas id="clients"></canvas>
               </div>
-
-                </div>
-                </div>
-
-                <div class="mb-3 row account-window-tab-flex">
-                  <div class="col-4">
-                    <input type="search" class="form-control" id="search" placeholder="Кого ищем?">
-                  </div>
-                </div>
-              <div id="calendar"></div>
-          </div>
+              <div class="analytic-item col-6">
+                <span class="analytic-h1">Сотрудники</span>
+                <span class="analytic-sum">Общее количество сотрудников <span class="analytic-sum-span">3</span></span>
+                <canvas id="staff" ></canvas>
+              </div>
+             
+            </canvas>
         
-    </div>
-    </div>
+          
+          </div>
+              </div>
+            </div>
+
+
+
+
+
+
 </main>
 
     <script type="text/javascript" src="./js/components/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="./js/components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" charset="utf8" src="./js/components/datatables.net/js/jquery.dataTables.js"></script>
-    <script src="./js/components/tui-code-snippet/dist/tui-code-snippet.min.js"></script>
-    <script src="./js/components/tui-time-picker/dist/tui-time-picker.min.js"></script>  
-    <script src="./js/components/tui-date-picker/dist/tui-date-picker.min.js"></script>
-    <script src="./js/components/tui-calendar/dist/tui-calendar.js"></script>
-    <script src="./js/components/chance/dist/chance.min.js"></script>
-    <script src="./js/components/tui-calendar/moment.min.js"></script>
-    <script src="./js/calendars.js"></script>
-    <script src="./js/schedules.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js" integrity="sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->
+    <script src="./js/components/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="./js/chart.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

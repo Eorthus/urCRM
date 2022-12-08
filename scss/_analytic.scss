@@ -1,0 +1,26 @@
+.analytic-container{
+    .analytic-item{
+        display: flex;
+        flex-direction: column;
+
+        /* margin: 10px; */
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    .analytic-h1{
+        font-size: var(--big_size);
+        color: $salmon_color;
+        /* font-weight: bold; */
+        display: block;
+        margin-bottom: 15px;
+    }
+    .analytic-sum{
+        font-size: 18px;
+        display: block;
+        margin-bottom: 30px;
+        .analytic-sum-span{
+            color: $salmon_color;
+            font-weight: bold;
+        }
+    }
+}

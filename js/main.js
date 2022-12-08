@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() { 
 
 //table  initialisation -----------------------------------------------------------------------------------------------------------
@@ -63,7 +64,7 @@ $('.delete').click(function () {
 
 
 //Add row button
-$('.add').each(function () {
+$('').each(function () {
     $(this).on('click', function(evt){
         //Create some data and insert it
         var rowData = [];
@@ -245,6 +246,9 @@ if (document.querySelector('.file-upload')){
             } else if (schedule.location) {
                 html.push('<span class="calendar-font-icon ic-location-b"></span>');
             }
+         else if (schedule.comment) {
+            html.push('<span class="calendar-font-icon ic-comment-b"></span>');
+        }
             html.push(' ' + schedule.title);
         }
 
@@ -339,6 +343,7 @@ if (document.querySelector('.file-upload')){
     function onNewSchedule() {
         var title = $('#new-schedule-title').val();
         var location = $('#new-schedule-location').val();
+        var comment = $('#new-schedule-comment').val();
         var isAllDay = document.getElementById('new-schedule-allday').checked;
         var start = datePicker.getStartDate();
         var end = datePicker.getEndDate();
@@ -354,6 +359,7 @@ if (document.querySelector('.file-upload')){
             title: title,
             isAllDay: isAllDay,
             location: location,
+            comment: comment,
             start: start,
             end: end,
             category: isAllDay ? 'allday' : 'time',
@@ -413,6 +419,7 @@ if (document.querySelector('.file-upload')){
             dragBgColor: calendar.bgColor,
             borderColor: calendar.borderColor,
             location: scheduleData.location,
+            comment: scheduleData.comment,
             isPrivate: scheduleData.isPrivate,
             state: scheduleData.state
         };
@@ -526,7 +533,7 @@ if (document.querySelector('.file-upload')){
             html.push(currentCalendarDate('MM YYYY'));
         } else {
             html.push(moment(cal.getDateRangeStart().getTime()).format('DD MM YYYY'));
-            html.push(' ~ ');
+            html.push(' — ');
             html.push(moment(cal.getDateRangeEnd().getTime()).format('DD MM'));
         }
         renderRange.innerHTML = html.join('');

@@ -404,11 +404,14 @@ var helpers = {
     },
 
     'titlePlaceholder-tmpl': function() {
-        return 'Subject';
+        return 'Название';
     },
 
     'locationPlaceholder-tmpl': function() {
-        return 'Location';
+        return 'Локация';
+    },
+    'commentPlaceholder-tmpl': function() {
+        return 'Комментарий';
     },
 
     'startDatePlaceholder-tmpl': function() {
@@ -436,6 +439,9 @@ var helpers = {
     },
     'popupDetailLocation-tmpl': function(schedule) {
         return schedule.location;
+    },
+    'popupDetailcomment-tmpl': function(schedule) {
+        return schedule.comment;
     },
     'popupDetailUser-tmpl': function(schedule) {
         return (schedule.attendees || []).join(', ');

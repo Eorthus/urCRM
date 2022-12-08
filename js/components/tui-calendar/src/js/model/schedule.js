@@ -191,6 +191,11 @@ function Schedule() {
      * @type {string}
      */
     this.location = '';
+    /**
+     * comment
+     * @type {string}
+     */
+     this.comment = '';
 
     /**
      * attendees
@@ -282,6 +287,7 @@ Schedule.prototype.init = function(options) {
     this.dueDateClass = options.dueDateClass || '';
     this.customStyle = options.customStyle || '';
     this.location = options.location || '';
+    this.comment = options.comment || '';
     this.attendees = options.attendees || [];
     this.recurrenceRule = options.recurrenceRule || '';
     this.isPrivate = options.isPrivate || false;

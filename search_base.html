@@ -16,7 +16,7 @@
         <div class="header-container">
             <nav class="navbar navbar-dark bg-light navbar-expand-md fixed-top header-navbar content">
                 <div class="container-fluid">
-                  <a class="navbar-brand glitch" data-text="ЮрПортал" href="case_table.html" >
+                  <a class="navbar-brand glitch" data-text="ЮрПортал" href="welcome.html" >
                    ЮрПортал
                   </a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -28,6 +28,27 @@
                       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
+                      <div class="header-sos">
+
+                        <div class="dropdown">
+                            <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                              
+                                <img src="./img/help.png" alt="notification">
+                                <!--icons from icons8.ru-->
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                <form class="account-window-tab-company row">
+                                    <span class="account-window-tab-company-title ">Сообщение в поддержку</span>
+                                    <div class=" account-window-tab-company-variable">
+                                      <textarea type="text" class="form-control" value="
+                                      " id="exampleFormControlInput1" placeholder="Опишите проблему" rows="5"></textarea>
+                                    </div>
+                                </form>
+                                <button type="button" class="btn btn-primary index-window-panel-add-button custom-btn btn-8"><span>Отправить</span> </button>
+                      
+                            </div>
+                          </div>
+                    </div>
                       <div class="header-notification">
                         <div class="dropdown">
                             <button class="dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -105,21 +126,33 @@
         <div class="index-menu">
             <ul class="index-menu-ul">
               <li class="index-menu-ul-li nav-item"><a class="nav-link" href="case_table.html"><img src="./img/home1.png" alt="icon"> <span class="index-menu-ul-li-span">Дела</span></a></li>
-                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="clients_table.html"><img src="./img/clients1.png" alt="icon"> <span class="index-menu-ul-li-span">Клиенты</span></a></li>
-                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="docs_table.html"><img src="./img/docs1.png" alt="icon"> <span class="index-menu-ul-li-span">Документы</span></a></li>
-                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calendar.html"><img src="./img/calendar1.png" alt="icon"> <span class="index-menu-ul-li-span">Календарь</span> </a></li>
-                <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calculator.html"><img src="./img/calc1.png" alt="icon"> <span class="index-menu-ul-li-span">Калькулятор</span> </a></li>
-                <li class="index-menu-ul-li nav-item link-active"><a class="nav-link" href="search_base.html"><img src="./img/paper1.png" alt="icon"> <span class="index-menu-ul-li-span">Справки</span></a></li>
-           
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="clients_table.html"><img src="./img/clients1.png" alt="icon"> <span class="index-menu-ul-li-span">Клиенты</span></a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calendar.html"><img src="./img/calendar1.png" alt="icon"> <span class="index-menu-ul-li-span">Календарь</span> </a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="docs_table.html"><img src="./img/docs1.png" alt="icon"> <span class="index-menu-ul-li-span">Доверенности</span></a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="search_base.html"><img src="./img/paper1.png" alt="icon"> <span class="index-menu-ul-li-span">Справки</span></a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="calculator.html"><img src="./img/calc1.png" alt="icon"> <span class="index-menu-ul-li-span">Калькулятор</span> </a></li>
+              <li class="index-menu-ul-li nav-item"><a class="nav-link" href="analytic.html"><img src="./img/analytics.png" alt="icon"> <span class="index-menu-ul-li-span">Аналитика</span></a></li>
                 <!--icons from icons8.ru-->
               </ul>
         </div>
-        <!--main content-->
         <div class="index-window">
-            <div class="index-window-panel">
-                <span class="index-window-panel-title text-gradient-light-red">Справочная база</span>
-                
-            </div>
+          <div class="index-window-panel">
+              <span class="index-window-panel-title text-gradient-light-red">Справочная база</span>
+              
+          </div>
+        <!--main content-->
+        <nav class="account-window">
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <button class="nav-link  tab-style active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Статьи</button>
+            <button class="nav-link tab-style " id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Суды</button>
+            <button class="nav-link tab-style" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Помощь</button>
+           
+          </div>
+        </nav>
+        <!--docs-->
+        <div class="tab-content account-window-tab" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+        
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
               <button class="btn btn-outline-success custom-btn btn-8" type="submit"><span><img src="./img/search.png" alt="search"></span></button>
@@ -135,7 +168,7 @@
                     <span class="search-card-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aperiam autem recusandae. Itaque voluptate iste laboriosam molestias quia atque odio, pariatur ad perspiciatis rerum provident, illum in magni voluptates voluptatem!</span>
                   <div class="search-card-content-func">
                     <span class="search-card-content-func-time">16.06.2022 17:42</span>
-                    <button class="search-card-content-func-edit custom-btn btn-8"><span>Редактировать</span></button>
+                    <button class="search-card-content-func-edit custom-btn btn-8"><span>Перейти</span></button>
                   </div>
                   </div>
                 </a>
@@ -150,7 +183,7 @@
                     <span class="search-card-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aperiam autem recusandae. Itaque voluptate iste laboriosam molestias quia atque odio, pariatur ad perspiciatis rerum provident, illum in magni voluptates voluptatem!</span>
                   <div class="search-card-content-func">
                     <span class="search-card-content-func-time">16.06.2022 17:42</span>
-                    <button class="search-card-content-func-edit custom-btn btn-8"><span>Редактировать</span></button>
+                    <button class="search-card-content-func-edit custom-btn btn-8"><span>Перейти</span></button>
                   </div>
                   </div>
                 </a>
@@ -174,6 +207,114 @@
                 </li>
               </ul>
             </nav>
+          </div>
+
+                  <!--declarations-->
+          <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
+           
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+              <button class="btn btn-outline-success custom-btn btn-8" type="submit"><span><img src="./img/search.png" alt="search"></span></button>
+            </form>
+            <ul class="search-container">
+              <li class="search-card">
+                <a href="#" class="search-card-a">
+                  <div class="search-card-img">
+                    <img src="./img/search.jpg" alt="card">
+                  </div>
+                  <div class="search-card-content">
+                    <span class="search-card-content-h text-gradient-light-red">Заголовок</span>
+                    <span class="search-card-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aperiam autem recusandae. Itaque voluptate iste laboriosam molestias quia atque odio, pariatur ad perspiciatis rerum provident, illum in magni voluptates voluptatem!</span>
+                  <div class="search-card-content-func">
+                    <span class="search-card-content-func-time">16.06.2022 17:42</span>
+                    <button class="search-card-content-func-edit custom-btn btn-8"><span>Перейти</span></button>
+                  </div>
+                  </div>
+                </a>
+              </li>
+              <li class="search-card">
+                <a href="#" class="search-card-a">
+                  <div class="search-card-img">
+                    <img src="./img/search.jpg" alt="card">
+                  </div>
+                  <div class="search-card-content">
+                    <span class="search-card-content-h text-gradient-light-red">Заголовок</span>
+                    <span class="search-card-content-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem aperiam autem recusandae. Itaque voluptate iste laboriosam molestias quia atque odio, pariatur ad perspiciatis rerum provident, illum in magni voluptates voluptatem!</span>
+                  <div class="search-card-content-func">
+                    <span class="search-card-content-func-time">16.06.2022 17:42</span>
+                    <button class="search-card-content-func-edit custom-btn btn-8"><span>Перейти</span></button>
+                  </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          
+            <nav aria-label="Page navigation example">
+              <ul class="pagination">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link active-p" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+               <!--templates-->
+               <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Поиск" aria-label="Search">
+                  <button class="btn btn-outline-success custom-btn btn-8" type="submit"><span><img src="./img/search.png" alt="search"></span></button>
+                </form>
+
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Как завести дело?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita, quod! Quas libero autem dignissimos qui voluptate, explicabo provident voluptates eos expedita perferendis voluptatem sed nihil perspiciatis praesentium consectetur omnis fugit.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Как подключить руководителя?
+                      </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro expedita nostrum ut. Ipsa consequuntur veritatis, est numquam eaque facilis saepe, officia omnis iste neque eligendi minus dolorum aperiam. Harum, dignissimos!
+                        </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Где посмотреть карточку клиента?
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum earum enim magnam velit! Nihil, suscipit. Quibusdam culpa provident, asperiores inventore consequuntur quo reprehenderit eum tempora cupiditate! Voluptatibus perferendis quidem in!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+
     </div>
     </div>
 </main>

@@ -14,7 +14,7 @@ var tz = require('../common/timezone');
 var sanitizer = require('../common/sanitizer');
 var TZDate = tz.Date;
 
-var SCHEDULE_VULNERABLE_OPTIONS = ['title', 'body', 'location', 'state', 'category', 'dueDateClass'];
+var SCHEDULE_VULNERABLE_OPTIONS = ['title', 'body', 'location','comment', 'state', 'category', 'dueDateClass'];
 
 /**
  * Sanitize option values having possible vulnerabilities
@@ -294,13 +294,15 @@ Base.prototype.updateSchedule = function(schedule, options) {
     }
 
     if (options.location) {
-        schedule.set('location', options.location);
+        schedule.set('Локация', options.location);
     }
 
     if (options.state) {
         schedule.set('state', options.state);
     }
-
+    if (options.comment) {
+        schedule.set('comment', options.comment);
+    }
     if (options.raw) {
         schedule.set('raw', options.raw);
     }
